@@ -1,1 +1,0 @@
-{"version":3,"file":"LinkedList.d.ts","sourceRoot":"","sources":["../../../src/LinkedList/LinkedList.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,QAAQ,EAAE,MAAM,YAAY,CAAC;AAEtC,qBAAa,UAAU,CAAC,CAAC;IACvB,IAAI,EAAE,QAAQ,CAAC,CAAC,CAAC,GAAG,IAAI,CAAC;IACzB,IAAI,EAAE,MAAM,CAAC;gBAED,IAAI,CAAC,EAAE,CAAC;IAMpB,KAAK;IAaL,IAAI,CAAC,IAAI,EAAE,CAAC;CAUb"}
