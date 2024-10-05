@@ -17,7 +17,7 @@ class LinkedList {
         if (!this.head) {
             return;
         }
-        else if (this.head && this.size === 1) {
+        if (this.head && this.size === 1) {
             this.clear();
             return;
         }

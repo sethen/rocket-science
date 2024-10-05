@@ -1,3 +1,7 @@
+// BinarySearch used log2 n to solve for instance if you had
+// 8 numbers you would only need to ever look at 3 numbers
+// to find the correct number -- thats because log2 8 equals 3
+// NOTE: BinarySearch will need a sorted list to work properly
 export function BinarySearch(arrOfNums: number[], numToFind: number) {
   let low = 0;
   let high = arrOfNums.length - 1;

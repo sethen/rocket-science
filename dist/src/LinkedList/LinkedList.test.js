@@ -21,7 +21,6 @@ const LinkedList_1 = require("./LinkedList");
             const testLinkedList = new LinkedList_1.LinkedList();
             testLinkedList.push(2);
             testLinkedList.pop();
-            console.log(testLinkedList);
             (0, globals_1.expect)(testLinkedList.size).toEqual(0);
         });
     });

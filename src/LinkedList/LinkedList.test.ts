@@ -25,7 +25,6 @@ describe('LinkedList', () => {
       testLinkedList.push(2);
       testLinkedList.pop();
 
-      console.log(testLinkedList);
       expect(testLinkedList.size).toEqual(0);
     })
   })
