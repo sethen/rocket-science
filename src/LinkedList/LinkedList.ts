@@ -24,6 +24,8 @@ export class LinkedList<T> {
 
     if (this.head && this.size === 1) {
       this.clear();
+
+      return;
     }
 
     let cursor = this.head;

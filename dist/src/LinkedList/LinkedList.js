@@ -17,8 +17,9 @@ class LinkedList {
         if (!this.head) {
             return;
         }
-        if (this.head && this.size === 1) {
+        else if (this.head && this.size === 1) {
             this.clear();
+            return;
         }
         let cursor = this.head;
         let prevCursor = cursor;
