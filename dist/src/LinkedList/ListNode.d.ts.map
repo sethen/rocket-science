@@ -1,0 +1,1 @@
+{"version":3,"file":"ListNode.d.ts","sourceRoot":"","sources":["../../../src/LinkedList/ListNode.ts"],"names":[],"mappings":"AAAA,qBAAa,QAAQ,CAAC,CAAC;IACrB,IAAI,EAAE,CAAC,CAAC;IACR,IAAI,EAAE,QAAQ,CAAC,CAAC,CAAC,GAAG,IAAI,CAAC;gBAEb,IAAI,EAAE,CAAC;CAIpB"}
