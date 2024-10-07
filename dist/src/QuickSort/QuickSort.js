@@ -5,16 +5,12 @@ function QuickSort(arrOfNums) {
     if (arrOfNums.length <= 1) {
         return arrOfNums;
     }
-    const pivot = Math.floor(Math.random() * (arrOfNums.length - 1));
+    const pivot = arrOfNums[arrOfNums.length - 1];
     const leftOfPivot = [];
     const rightOfPivot = [];
-    console.log(pivot);
-    for (let i = 0; i < arrOfNums.length; i += 1) {
+    for (let i = 0; i < arrOfNums.length - 1; i += 1) {
         const currentNum = arrOfNums[i];
-        if (currentNum === pivot) {
-            continue;
-        }
-        else if (currentNum < pivot) {
+        if (currentNum < pivot) {
             leftOfPivot.push(currentNum);
         }
         else {
