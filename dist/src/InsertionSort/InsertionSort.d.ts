@@ -1,2 +1,2 @@
-export declare function InsertionSort(arrOfNums: Array<number>): Array<number>;
+export declare function InsertionSort(arrOfNums: Array<number>, explain?: boolean): Array<number>;
 //# sourceMappingURL=InsertionSort.d.ts.map

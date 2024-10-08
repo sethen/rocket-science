@@ -1,22 +1,17 @@
-export function InsertionSort(arrOfNums: Array<number>): Array<number> {
-  // loop over entire array but start at 1
-  // since we assume first value is in the correct spot
+export function InsertionSort(arrOfNums: Array<number>, explain?: boolean): Array<number> {
+  // loop through all values but start at 1
   for (let i = 1; i < arrOfNums.length; i += 1) {
-    // current value in the array
-    const current = arrOfNums[ i ];
-    // value for us to compare to left of i
-    let j = i - 1;
+    // start with the value to sort at index of 1
+    const valueToSort = arrOfNums[ i ];
 
-    // while j is greater than or equal to zero (will always be true)
-    // and the array index at j is greater than current value
-    while (j >= 0 && arrOfNums[ j ] > current) {
-      // assign the next index to the current value of j
-      // shifting to the right of the array
-      arrOfNums[ j + 1 ] = arrOfNums[ j ];
-      j -= 1;
+    // if the index to the left of the value to sort is greater
+    // and the index i is greater than 0
+    while (arrOfNums[ i - 1 ] > valueToSort && i > 0) {
+      // swap values
+      [ arrOfNums[ i ], arrOfNums[ i - 1 ] ] = [ arrOfNums[ i - 1 ], arrOfNums [ i ] ];
+      // walk down the list
+      i = i - 1;
     }
-
-    arrOfNums[ j + 1 ] = current;
   }
 
   return arrOfNums;
