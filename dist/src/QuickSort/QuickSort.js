@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.QuickSort = QuickSort;
 function QuickSort(arrOfNums) {
+    debugger;
     if (arrOfNums.length <= 1) {
         return arrOfNums;
     }

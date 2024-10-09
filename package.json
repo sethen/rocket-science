@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc --build .",
+    "debug": "npm run build && node --inspect-brk ./dist/index.js",
     "test": "tsc --build && jest"
   },
   "author": "",

@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BubbleSort = BubbleSort;
 function BubbleSort(arrOfNums) {
+    debugger;
     for (let i = 0; i < arrOfNums.length; i += 1) {
         for (let j = 0; j < arrOfNums.length; j += 1) {
             if (arrOfNums[j] > arrOfNums[j + 1]) {
