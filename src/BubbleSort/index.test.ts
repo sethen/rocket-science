@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import { BubbleSort } from './BubbleSort';
+import { BubbleSort } from './';
 
 describe('BubbleSort', () => {
   it('should be able to sort numbers in an unsorted list', () => {

@@ -11,4 +11,4 @@ function BubbleSort(arrOfNums) {
     }
     return arrOfNums;
 }
-//# sourceMappingURL=BubbleSort.js.map
+//# sourceMappingURL=index.js.map

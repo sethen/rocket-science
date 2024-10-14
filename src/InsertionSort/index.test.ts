@@ -1,5 +1,5 @@
 import { describe, expect } from '@jest/globals';
-import { InsertionSort } from './InsertionSort';
+import { InsertionSort } from './';
 
 describe('InsertionSort', () => {
   it('should be able to sort numbers in an unsorted list', () => {

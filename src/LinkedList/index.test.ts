@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import { LinkedList } from './LinkedList';
+import { LinkedList } from './';
 
 describe('LinkedList', () => {
   describe('clear', () => {

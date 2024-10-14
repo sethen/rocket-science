@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import { BinarySearch } from './BinarySearch';
+import { BinarySearch } from './';
 
 describe('BinarySearch', () => {
   it('should be able to find numbers in a sorted list', () => {

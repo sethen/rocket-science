@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import { QuickSort } from './QuickSort';
+import { QuickSort } from './';
 
 describe('QuickSort', () => {
   it('should be able to sort numbers in an unsorted list', () => {

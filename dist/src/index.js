@@ -1,14 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.QuickSort = exports.LinkedList = exports.InsertionSort = exports.BubbleSort = exports.BinarySearch = void 0;
-const BinarySearch_1 = require("./BinarySearch/BinarySearch");
+exports.TwoSum = exports.QuickSort = exports.LinkedList = exports.InsertionSort = exports.BubbleSort = exports.BinarySearch = void 0;
+const BinarySearch_1 = require("./BinarySearch");
 Object.defineProperty(exports, "BinarySearch", { enumerable: true, get: function () { return BinarySearch_1.BinarySearch; } });
-const BubbleSort_1 = require("./BubbleSort/BubbleSort");
+const BubbleSort_1 = require("./BubbleSort");
 Object.defineProperty(exports, "BubbleSort", { enumerable: true, get: function () { return BubbleSort_1.BubbleSort; } });
-const InsertionSort_1 = require("./InsertionSort/InsertionSort");
+const InsertionSort_1 = require("./InsertionSort");
 Object.defineProperty(exports, "InsertionSort", { enumerable: true, get: function () { return InsertionSort_1.InsertionSort; } });
-const LinkedList_1 = require("./LinkedList/LinkedList");
+const LinkedList_1 = require("./LinkedList");
 Object.defineProperty(exports, "LinkedList", { enumerable: true, get: function () { return LinkedList_1.LinkedList; } });
-const QuickSort_1 = require("./QuickSort/QuickSort");
+const QuickSort_1 = require("./QuickSort");
 Object.defineProperty(exports, "QuickSort", { enumerable: true, get: function () { return QuickSort_1.QuickSort; } });
+const TwoSum_1 = require("./TwoSum");
+Object.defineProperty(exports, "TwoSum", { enumerable: true, get: function () { return TwoSum_1.TwoSum; } });
 //# sourceMappingURL=index.js.map
