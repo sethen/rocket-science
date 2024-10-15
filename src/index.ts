@@ -1,12 +1,15 @@
-import { BinarySearch } from './BinarySearch';
-import { BubbleSort } from './BubbleSort';
-import { InsertionSort } from './InsertionSort';
-import { LinkedList } from './LinkedList';
-import { MergeSort } from './MergeSort';
-import { Queue } from './Queue';
-import { QuickSort } from './QuickSort';
-import { Stack } from './Stack';
-import { TwoSum } from './TwoSum';
+// algorithms
+import { BinarySearch } from './algorithms/BinarySearch';
+import { BubbleSort } from './algorithms/BubbleSort';
+import { InsertionSort } from './algorithms/InsertionSort';
+import { MergeSort } from './algorithms/MergeSort';
+import { QuickSort } from './algorithms/QuickSort';
+import { TwoSum } from './algorithms/TwoSum';
+
+// data structures
+import { LinkedList } from './data-structures/LinkedList';
+import { Queue } from './data-structures/Queue';
+import { Stack } from './data-structures/Stack';
 
 export { BinarySearch }
 export { BubbleSort }
