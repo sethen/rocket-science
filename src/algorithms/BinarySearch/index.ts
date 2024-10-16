@@ -1,5 +1,4 @@
 export function BinarySearch(arrOfNums: number[], numToFind: number) {
-  debugger;
   // start low at zero
   let low = 0;
   // start high at the length of the array - 1
@@ -34,5 +33,3 @@ export function BinarySearch(arrOfNums: number[], numToFind: number) {
   // if you can't find the number return -1
   return -1;
 }
-
-BinarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 8);
