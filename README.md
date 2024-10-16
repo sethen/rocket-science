@@ -1,1 +1,1 @@
-Common algorithms solved using TypeScript
+Common algorithms and data structures explained using TypeScript!
