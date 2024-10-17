@@ -7,6 +7,7 @@ This is a repository full of implementations for common algorithms and data stru
 * [How to Use](#how-to-use)
 * [Algorithms](#algorithms)
   * [Binary Search](#binary-search)
+  * [Bubble Sort](#bubble-sort)
   * [Two Sum](#two-sum)
 * [Data Structures](#data-structures)
   * [Queue](#queue)
@@ -50,6 +51,30 @@ Binary search operates in *O(log n)* time complexity, making it much faster than
 ## Resources
 * JavaScript implementation - [Binary Search in 100 Seconds](https://www.youtube.com/watch?v=MFhxShGxHWch)
 * Python implementation - [Binary Search - Leetcode 704 - Python](https://www.youtube.com/watch?v=s4DPM8ct1pI)
+
+
+# Bubble Sort
+You can find the implementation of Bubble Sort at [./src/algorithms/BubbleSort/index.ts](./src/algorithms/BubbleSort/index.ts)
+
+Bubble sort is a simple, comparison-based sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. This process continues until no more swaps are needed, meaning the list is sorted.  Bubble sort is not efficient for large datasets, but it’s easy to understand and implement, making it useful for educational purposes.
+
+## Steps:
+* Starting from the beginning of the list, compare each pair of adjacent elements
+* If the current element is greater than the next, swap them
+* Continue this process for all elements. After each pass, the largest element "bubbles" to its correct position
+* Repeat until the entire list is sorted
+
+## Example:
+For an array `[5, 3, 8, 4, 2]`:
+
+* Compare 5 and 3, swap -> `[3, 5, 8, 4, 2]`
+* Compare 5 and 8, no swap
+* Compare 8 and 4, swap -> `[3, 5, 4, 8, 2]`
+* Continue until the array is sorted -> `[2, 3, 4, 5, 8]`
+
+## Time Complexity:
+* Worst and Average case: O(n²) (when the array is in reverse order or random).
+* Best case: O(n) (when the array is already sorted).
 
 
 # Two Sum 
