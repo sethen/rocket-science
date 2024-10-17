@@ -32,9 +32,8 @@ It works by repeatedly dividing the search interval in half. If the *target valu
 Binary search operates in *O(log n)* time complexity, making it much faster than linear search for large datasets, but it requires the data to be sorted.
 
 ## Resources
-JavaScript implementation - [Binary Search in 100 Seconds](https://www.youtube.com/watch?v=MFhxShGxHWch)
-
-Python implementation - [Binary Search - Leetcode 704 - Python](https://www.youtube.com/watch?v=s4DPM8ct1pI)
+* JavaScript implementation - [Binary Search in 100 Seconds](https://www.youtube.com/watch?v=MFhxShGxHWch)
+* Python implementation - [Binary Search - Leetcode 704 - Python](https://www.youtube.com/watch?v=s4DPM8ct1pI)
 
 # Data Structures
 Here are all of the data structures that are implemented in this repository.
