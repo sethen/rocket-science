@@ -6,7 +6,7 @@ This is a repository full of implementations for common algorithms and data stru
 * [How to Use](#how-to-use)
 * [Algorithms](#algorithms)
   * [Binary Search](#binary-search)
-* [Data Structure](#data-structures)
+* [Data Structures](#data-structures)
   * [Queues](#queues)
 
 # How to Use 
