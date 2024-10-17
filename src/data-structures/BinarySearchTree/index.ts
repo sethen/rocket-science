@@ -7,7 +7,7 @@ export class BinarySearchTree<T> {
     this.root = value ? new TreeNode<T>(value) : undefined;
   }
 
-  insert(value: T){
+  insert(value: T) {
     // create new node regardless
     var newNode = new TreeNode(value);
 

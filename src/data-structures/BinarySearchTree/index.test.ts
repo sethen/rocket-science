@@ -1,6 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
 import { BinarySearchTree } from './';
-import { TreeNode } from '../TreeNode';
 
 describe('BinarySearchTree', () => {
   describe('insert', () => {

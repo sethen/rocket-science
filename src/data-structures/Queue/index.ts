@@ -2,7 +2,7 @@
 // think of it as a line
 // whatever comes in first goes out first
 export class Queue<T> {
-  private queue: Array<T> = [];
+  public queue: Array<T> = [];
 
   // remove an item from the beginning 
   public dequeue(): T | undefined {
@@ -14,12 +14,12 @@ export class Queue<T> {
     this.queue.push(item);
   }
 
-  public getQueue() {
-    return this.queue;
-  }
-
   public isEmpty() {
     return this.size() === 0;
+  }
+
+  public peek() {
+    return this.queue[ 0 ];
   }
 
   public size(): number {
