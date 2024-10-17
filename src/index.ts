@@ -1,12 +1,12 @@
 // data structures
 import { BinarySearchTree } from './data-structures/BinarySearchTree';
-import { LinkedList } from './data-structures/LinkedList';
 import { Queue } from './data-structures/Queue';
+import { SinglyLinkedList } from './data-structures/SinglyLinkedList';
 import { Stack } from './data-structures/Stack';
 import { TreeNode } from './data-structures/TreeNode';
 
 export { BinarySearchTree }
-export { LinkedList }
+export { SinglyLinkedList }
 export { Queue }
 export { Stack }
 export { TreeNode }

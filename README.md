@@ -1,6 +1,7 @@
 # Rocket Science
 This is a repository full of implementations for common algorithms and data structures.  These are written in TypeScript and provide comments to help you understand what's happening.
 
+
 # Tables of Contents
 
 * [How to Use](#how-to-use)
@@ -8,7 +9,10 @@ This is a repository full of implementations for common algorithms and data stru
   * [Binary Search](#binary-search)
   * [Two Sum](#two-sum)
 * [Data Structures](#data-structures)
-  * [Queues](#queues)
+  * [Queue](#queue)
+  * [Singly Linked List](#singly-linked-list)
+  * [Stack](#stack)
+
 
 # How to Use 
 This repository is simple and doesn't require much in the way of usage.  You need `Node.js` installed and need to run `npm install` to get everything installed.  You can use `npm run test` for testing, `npm run build` for building and `npm run debug` to run the node debugger in chrome.
@@ -47,6 +51,7 @@ Binary search operates in *O(log n)* time complexity, making it much faster than
 * JavaScript implementation - [Binary Search in 100 Seconds](https://www.youtube.com/watch?v=MFhxShGxHWch)
 * Python implementation - [Binary Search - Leetcode 704 - Python](https://www.youtube.com/watch?v=s4DPM8ct1pI)
 
+
 # Two Sum 
 You can find the implementation of Two Sum at [./src/algorithms/TwoSum/index.ts](./src/algorithms/TwoSum/index.ts)
 
@@ -71,11 +76,12 @@ Two Sum has a time complexity of *O(n)*, making it efficient for large inputs.  
 * Python implementation [Short](https://www.youtube.com/shorts/pFag4mBsO1I)
 * Python implementation [Short](https://www.youtube.com/shorts/ysifKoOZw5g)
 
+
 # Data Structures
 Here are all of the data structures that are implemented in this repository.
 
-# Queues
-You can find the implementation of a Queue at [./src/data-structures/Queues/index.ts](./src/data-structures/Queue/index.ts)
+# Queue
+You can find the implementation of a Queue at [./src/data-structures/Queue/index.ts](./src/data-structures/Queue/index.ts)
 
 A queue is a linear data structure that follows the First In, First Out (FIFO) principle, meaning the first element added to the queue will be the first one to be removed. It is similar to a real-life queue, like waiting in line—those who arrive first get served first.
 
@@ -90,3 +96,40 @@ A queue is a linear data structure that follows the First In, First Out (FIFO) p
 * Breadth-First Search (BFS) in graphs
 * Message Queuing systems in distributed applications
 * Queues are typically implemented using arrays or linked lists and are fundamental in managing tasks that need to be processed in order
+
+
+# Stack
+You can find the implementation of a Stack at [./src/data-structures/Stack/index.ts](./src/data-structures/Stack/index.ts)
+
+A stack is a linear data structure that follows the Last In, First Out (LIFO) principle, meaning the last element added to the stack will be the first one removed. It is similar to a stack of plates, where the plate placed on top is the first to be taken off.
+
+## Key Operations
+* **Push**: Add an element to the top of the stack
+* **Pop**: Remove and return the top element
+* **Peek**: Retrieve the top element without removing it
+* **IsEmpty**: Check if the stack is empty
+
+## Use Cases
+* Function call stack in programming
+* Expression evaluation (e.g., parsing parentheses)
+* Backtracking algorithms like Depth-First Search (DFS)
+* Stacks can be implemented using arrays or linked lists and are crucial for scenarios where you need to manage data in reverse order
+
+
+# Singly Linked List
+You can find the implementation of a Singly Linked List at [./src/data-structures/SinglyLinkedList/index.ts](./src/data-structures/SinglyLinkedList/index.ts)
+
+A Singly Linked List is a linear data structure made up of nodes, where each node contains two elements:
+* **Data**: The value or content of the node
+* **Pointer/Reference**: A link to the next node in the sequence
+
+Unlike arrays, linked lists do not store elements in contiguous memory locations. Instead, each element (node) points to the next location in memory.
+
+## Key Operations
+* **Insert**: Add a node to the list
+* **Delete**: Remove a node from the list
+* **Search**: Find a node based on its value
+
+## Use Cases:
+* Efficient insertions and deletions at any position
+* Dynamic memory allocation where size can grow or shrink as needed

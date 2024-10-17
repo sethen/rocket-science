@@ -1,13 +1,13 @@
-import type { IListNode } from '../ListNode';
-import { ListNode } from '../ListNode';
+import type { ISinglyListNode } from '../SinglyListNode';
+import { SinglyListNode } from '../SinglyListNode';
 
-export class LinkedList<T> {
-  head: IListNode<T> | null;
+export class SinglyLinkedList<T> {
+  head: ISinglyListNode<T> | null;
   size: number;
-  tail: IListNode<T> | null;
+  tail: ISinglyListNode<T> | null;
 
   constructor(data?: T) {
-    this.head = data ? new ListNode<T>(data) : null;
+    this.head = data ? new SinglyListNode<T>(data) : null;
     this.tail = this.head;
     this.size = this.head ? 1 : 0;
   }
@@ -44,7 +44,7 @@ export class LinkedList<T> {
   }
 
   public push(data: T) {
-    const listNode = new ListNode<T>(data);
+    const listNode = new SinglyListNode<T>(data);
 
     if (!this.head) {
       this.head = listNode;
@@ -78,7 +78,7 @@ export class LinkedList<T> {
   }
 
   public unshift(data: T) {
-    const listNode = new ListNode<T>(data);
+    const listNode = new SinglyListNode<T>(data);
 
     if (!this.head) {
       this.head = listNode;
