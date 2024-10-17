@@ -28,24 +28,24 @@ Here are all of the algorithms that are implemented in this repository.
 # Binary Search
 You can find the implementation of Binary Search at [./src/algorithms/BinarySearch/index.ts](./src/algorithms/BinarySearch/index.ts)
 
-Binary Search is an efficient algorithm used to find the position of a target value within a _sorted_ array.  Search faster for great good!
+Binary Search is an efficient algorithm used to find the position of a target value within a _sorted_ array.  Search faster for great good!  It works by repeatedly dividing the search interval in half. If the *target value is less* than the middle element, you eliminate everything above the middle element.  If *target value is greater* than the middle element, you eliminate everything below the middle element. This process repeats until the target is found or the interval is empty.
 
-## Explanation
-It works by repeatedly dividing the search interval in half. If the *target value is less* than the middle element, you eliminate everything above the middle element.  If *target value is greater* than the middle element, you eliminate everything below the middle element. This process repeats until the target is found or the interval is empty.
+## Steps
+* Start with the entire sorted array
+* Compare the middle element with the target value
+* If the target equals the middle element, return its index
+* If the target is smaller than the middle element, repeat the search on the left half
+* If the target is larger, repeat the search on the right half
+* Continue this process until the target is found or the array can no longer be divided
 
 ## Example
-```javascript
-const input = [ 1, 2, 3, 4, 5, 6 ];
-const target = 4;
-```
+For a sorted array `[1, 3, 5, 7, 9]` and target `7`:
 
-In the above Binary Search will take 3 steps to find the number `4`:
-* It will first guess `3` and then eliminate the numbers below that
-* It will guess `5` and elimnate the numbers above it
-* Finally, it will find 4
+* Compare with middle element `5`, target is larger, search right half
+* Compare with middle element `7`, target is found, return index `3`.
 
-# Time Complexity
-Binary search operates in *O(log n)* time complexity, making it much faster than linear search for large datasets, but it requires the data to be sorted.
+## Time Complexity
+Binary search operates in *O(log n)* time complexity, making it much faster than linear search for large datasets, but it requires the data to be sorted.  O(log n), where n is the number of elements, because the search space is halved with each step.
 
 ## Resources
 * JavaScript implementation - [Binary Search in 100 Seconds](https://www.youtube.com/watch?v=MFhxShGxHWch)
@@ -55,22 +55,23 @@ Binary search operates in *O(log n)* time complexity, making it much faster than
 # Two Sum 
 You can find the implementation of Two Sum at [./src/algorithms/TwoSum/index.ts](./src/algorithms/TwoSum/index.ts)
 
-Two Sum problem involves finding two numbers in an array that add up to a given target. The goal is to return the indices of these two numbers.
+Two Sum problem involves finding two numbers in an array that add up to a given target. The goal is to return the indices of these two numbers.  A common, optimized approach uses a hash map to store the numbers and their indices as you iterate through the array. For each number, you calculate the complement (target minus the current number) and check if it's already in the map. If it is, you return the indices of the complement and the current number. 
 
-## Explanation
-A common, optimized approach uses a hash map to store the numbers and their indices as you iterate through the array. For each number, you calculate the complement (target minus the current number) and check if it's already in the map. If it is, you return the indices of the complement and the current number. 
+## Steps
+* Iterate through the array while keeping track of each number's complement (target minus the current number)
+* Use a hash map to store the numbers and their indices as you go
+* For each number, check if its complement already exists in the hash map
+* If found, return the indices of the complement and the current number
 
-## Example
-```javascript
-const input = [ 1, 2, 3, 4, 5 ];
-const target = 8;
-const output = [ 2, 4 ];
-```
+## Example:
+For an array [2, 7, 11, 15] and target 9:
 
-In the above since `3` and `5` are at index `2` and `4` we return an array of those indexes.
+* Complement of 2 is 7, store 2 in the map
+* Complement of 7 is 2, which is already in the map
+* Return indices [0, 1].
 
 ## Time Complexity
-Two Sum has a time complexity of *O(n)*, making it efficient for large inputs.  Avoid nested for loops.
+O(n), where n is the number of elements, because the array is traversed once, and hash map operations take constant time.  Two Sum is efficient for large datasets due to its use of a hash map, making it a common interview question and practical solution for sum-based problems.
 
 ## Resources
 * Python implementation [Short](https://www.youtube.com/shorts/pFag4mBsO1I)

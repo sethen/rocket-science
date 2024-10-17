@@ -17,16 +17,16 @@ export function QuickSort(arrOfValues: number[]): number[] {
   // loop through all numbers in array but exclude last number
   // which we are using as our pivot (arrOfValues.length -1)
   for (let i = 0; i < arrOfValues.length - 1; i += 1) {
-    const currentNum = arrOfValues[ i ];
+    const currentValue = arrOfValues[ i ];
 
     // if the current number is less than the pivot
-    if (currentNum < pivot) {
+    if (currentValue < pivot) {
       // add it to the left pivot array
-      leftOfPivot.push(currentNum);
+      leftOfPivot.push(currentValue);
     }
     else {
       // add it to the right pivot array
-      rightOfPivot.push(currentNum);
+      rightOfPivot.push(currentValue);
     }
   }
 
