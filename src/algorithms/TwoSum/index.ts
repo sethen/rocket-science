@@ -1,4 +1,4 @@
-export function TwoSum(arrOfNums: number[], numToFind: number): Array<number> {
+export function TwoSum(arrOfValues: number[], targetValue: number): Array<number> {
   // start with a record to keep track of values and indexes
   // for instance { '2': 0 } -> means the value of 2 is in the 0 index
   const numsToIndex: Record<number, number> = {};
@@ -6,12 +6,12 @@ export function TwoSum(arrOfNums: number[], numToFind: number): Array<number> {
   let result: Array<number> = [];
 
   // loop through all numbers in the array
-  for (let i = 0; i < arrOfNums.length; i += 1) {
+  for (let i = 0; i < arrOfValues.length; i += 1) {
     // current number to loop through
-    const currentNum = arrOfNums[ i ];
+    const currentNum = arrOfValues[ i ];
     // the difference between the number your trying to find
     // and the current number you're evaluating in the loop
-    const diff = numToFind - currentNum;
+    const diff = targetValue - currentNum;
 
     // if the difference has already been added to the map
     if (diff in numsToIndex) {

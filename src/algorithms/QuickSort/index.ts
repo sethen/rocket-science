@@ -1,23 +1,23 @@
-export function QuickSort(arrOfNums: number[]): number[] {
+export function QuickSort(arrOfValues: number[]): number[] {
   // if the array is less than or equal to 1
   // it is already sorted
-  if (arrOfNums.length <= 1) {
-    return arrOfNums;
+  if (arrOfValues.length <= 1) {
+    return arrOfValues;
   }
 
   // we use the last number as the pivot
   // any number can be used as the pivot but implementation
   // would be different
-  const pivot = arrOfNums[arrOfNums.length - 1];
+  const pivot = arrOfValues[arrOfValues.length - 1];
   // array for all numbers less than pivot
   const leftOfPivot = [];
   // array of all numbers greater than pivot
   const rightOfPivot = [];
 
   // loop through all numbers in array but exclude last number
-  // which we are using as our pivot (arrOfNums.length -1)
-  for (let i = 0; i < arrOfNums.length - 1; i += 1) {
-    const currentNum = arrOfNums[ i ];
+  // which we are using as our pivot (arrOfValues.length -1)
+  for (let i = 0; i < arrOfValues.length - 1; i += 1) {
+    const currentNum = arrOfValues[ i ];
 
     // if the current number is less than the pivot
     if (currentNum < pivot) {

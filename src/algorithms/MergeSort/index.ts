@@ -1,20 +1,20 @@
-export function MergeSort(arrOfNums: Array<number>): Array<number> {
+export function MergeSort(arrOfValues: Array<number>): Array<number> {
   // get the length of the array
-  const arrOfNumsLength = arrOfNums.length;
+  const arrOfValuesLength = arrOfValues.length;
 
   // if the length of the array is less than or equal to 1
-  if (arrOfNumsLength <= 1) {
+  if (arrOfValuesLength <= 1) {
     // return the array
-    return arrOfNums;
+    return arrOfValues;
   }
 
   // find the middle of the array
   // with odd numbers we need to round down
-  const middle = Math.floor(arrOfNums.length / 2);
+  const middle = Math.floor(arrOfValues.length / 2);
   // copy the array from zero to the middle of the array
-  const leftArr: Array<number> = MergeSort(arrOfNums.slice(0, middle));
+  const leftArr: Array<number> = MergeSort(arrOfValues.slice(0, middle));
   // copy the array from the middle to the end
-  const rightArr: Array<number> = MergeSort(arrOfNums.slice(middle));
+  const rightArr: Array<number> = MergeSort(arrOfValues.slice(middle));
 
   // use merge to merge the arrays back together
   return Merge(leftArr, rightArr);
