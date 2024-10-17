@@ -64,11 +64,11 @@ Two Sum problem involves finding two numbers in an array that add up to a given 
 * If found, return the indices of the complement and the current number
 
 ## Example:
-For an array [2, 7, 11, 15] and target 9:
+For an array `[2, 7, 11, 15]` and target `9`:
 
-* Complement of 2 is 7, store 2 in the map
-* Complement of 7 is 2, which is already in the map
-* Return indices [0, 1].
+* Complement of `2` is `7`, store `2` in the map
+* Complement of `7` is `2`, which is already in the map
+* Return indices `[0, 1]`.
 
 ## Time Complexity
 O(n), where n is the number of elements, because the array is traversed once, and hash map operations take constant time.  Two Sum is efficient for large datasets due to its use of a hash map, making it a common interview question and practical solution for sum-based problems.
