@@ -6,6 +6,7 @@ This is a repository full of implementations for common algorithms and data stru
 * [How to Use](#how-to-use)
 * [Algorithms](#algorithms)
   * [Binary Search](#binary-search)
+  * [Two Sum](#two-sum)
 * [Data Structures](#data-structures)
   * [Queues](#queues)
 
@@ -23,17 +24,52 @@ Here are all of the algorithms that are implemented in this repository.
 # Binary Search
 You can find the implementation of Binary Search at [./src/algorithms/BinarySearch/index.ts](./src/algorithms/BinarySearch/index.ts)
 
-Binary search is an efficient algorithm used to find the position of a target value within a _sorted_ array.  Search faster for great good!
+Binary Search is an efficient algorithm used to find the position of a target value within a _sorted_ array.  Search faster for great good!
 
 ## Explanation
 It works by repeatedly dividing the search interval in half. If the *target value is less* than the middle element, you eliminate everything above the middle element.  If *target value is greater* than the middle element, you eliminate everything below the middle element. This process repeats until the target is found or the interval is empty.
 
-## Time Complexity
+## Example
+```javascript
+const input = [ 1, 2, 3, 4, 5, 6 ];
+const target = 4;
+```
+
+In the above Binary Search will take 3 steps to find the number `4`:
+* It will first guess `3` and then eliminate the numbers below that
+* It will guess `5` and elimnate the numbers above it
+* Finally, it will find 4
+
+# Time Complexity
 Binary search operates in *O(log n)* time complexity, making it much faster than linear search for large datasets, but it requires the data to be sorted.
 
 ## Resources
 * JavaScript implementation - [Binary Search in 100 Seconds](https://www.youtube.com/watch?v=MFhxShGxHWch)
 * Python implementation - [Binary Search - Leetcode 704 - Python](https://www.youtube.com/watch?v=s4DPM8ct1pI)
+
+# Two Sum 
+You can find the implementation of Two Sum at [./src/algorithms/TwoSum/index.ts](./src/algorithms/TwoSum/index.ts)
+
+Two Sum problem involves finding two numbers in an array that add up to a given target. The goal is to return the indices of these two numbers.
+
+## Explanation
+A common, optimized approach uses a hash map to store the numbers and their indices as you iterate through the array. For each number, you calculate the complement (target minus the current number) and check if it's already in the map. If it is, you return the indices of the complement and the current number. 
+
+## Example
+```javascript
+const input = [ 1, 2, 3, 4, 5 ];
+const target = 8;
+const output = [ 2, 4 ];
+```
+
+In the above since `3` and `5` are at index `2` and `4` we return an array of those indexes.
+
+## Time Complexity
+Two Sum has a time complexity of *O(n)*, making it efficient for large inputs.  Avoid nested for loops.
+
+## Resources
+* Python implementation [Short](https://www.youtube.com/shorts/pFag4mBsO1I)
+* Python implementation [Short](https://www.youtube.com/shorts/ysifKoOZw5g)
 
 # Data Structures
 Here are all of the data structures that are implemented in this repository.
