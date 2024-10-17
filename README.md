@@ -73,8 +73,11 @@ For an array `[5, 3, 8, 4, 2]`:
 * Continue until the array is sorted -> `[2, 3, 4, 5, 8]`
 
 ## Time Complexity:
-* Worst and Average case: O(n²) (when the array is in reverse order or random).
-* Best case: O(n) (when the array is already sorted).
+* Worst and Average case: `O(n²)` (when the array is in reverse order or random)
+* Best case: `O(n)` (when the array is already sorted)
+
+## Resources
+* Java implementation [Learn Bubble Sort in 7 minutes](https://www.youtube.com/watch?v=Dv4qLJcxus8)
 
 
 # Two Sum 
