@@ -3,14 +3,11 @@ This is a repository full of implementations for common algorithms and data stru
 
 # Tables of Contents
 
-## Instructions
 * [How to Use](#how-to-use)
-
-## Algorithms 
 * [Algorithms](#algorithms)
-** [Binary Search](#binary-search)
+  * [Binary Search](#binary-search)
 * [Data Structure](#data-structures)
-** [Queues](#queues)
+  * [Queues](#queues)
 
 # How to Use 
 This repository is simple and doesn't require much in the way of usage.  You need `Node.js` installed and need to run `npm install` to get everything installed.  You can use `npm run test` for testing, `npm run build` for building and `npm run debug` to run the node debugger in chrome.
@@ -47,13 +44,13 @@ You can find the implementation of a Queue at [./src/data-structures/Queues/inde
 
 A queue is a linear data structure that follows the First In, First Out (FIFO) principle, meaning the first element added to the queue will be the first one to be removed. It is similar to a real-life queue, like waiting in line—those who arrive first get served first.
 
-## Key Operations:
-* Enqueue: Add an element to the back of the queue (think push in arrays)
-* Dequeue: Remove an element from the front of the queue (think pop in arrays)
-* Peek: Retrieve the element at the front of the queue without removing it
-* IsEmpty: Check if the queue is empty (looks at the length of the array)
+## Key Operations
+* **Enqueue**: Add an element to the back of the queue (think push in arrays)
+* **Dequeue**: Remove an element from the front of the queue (think pop in arrays)
+* **Peek**: Retrieve the element at the front of the queue without removing it
+* **IsEmpty**: Check if the queue is empty (looks at the length of the array)
 
-## Use Cases:
+## Use Cases
 * Scheduling tasks in operating systems (like managing print jobs or CPU tasks)
 * Breadth-First Search (BFS) in graphs
 * Message Queuing systems in distributed applications
