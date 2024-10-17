@@ -46,7 +46,7 @@ A queue is a linear data structure that follows the First In, First Out (FIFO) p
 
 ## Key Operations
 * **Enqueue**: Add an element to the back of the queue (think push in arrays)
-* **Dequeue**: Remove an element from the front of the queue (think pop in arrays)
+* **Dequeue**: Remove an element from the front of the queue (think shift in arrays)
 * **Peek**: Retrieve the element at the front of the queue without removing it
 * **IsEmpty**: Check if the queue is empty (looks at the length of the array)
 
