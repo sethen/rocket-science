@@ -2,23 +2,27 @@
 // think of it like a stack of papers
 // whatever comes in last goes out first
 export class Stack<T> {
-  private storage: Array<T> = [];
+  private stack: Array<T> = [];
+
+  public getStack() {
+    return this.stack;
+  }
+
+  public isEmpty() {
+    return this.size() === 0;
+  }
 
   // remove an item from the end
-  pop(): T | undefined {
-    return this.storage.pop();
+  public pop(): T | undefined {
+    return this.stack.pop();
   }
 
   // add an item to the end
-  push(item: T): void {
-    this.storage.push(item);
+  public push(item: T): void {
+    this.stack.push(item);
   }
 
-  size() {
-    return this.storage.length;
-  }
-
-  toString() {
-   return this.storage.toString();
+  public size() {
+    return this.stack.length;
   }
 }

@@ -1,5 +1,4 @@
 export function QuickSort(arrOfNums: number[]): number[] {
-  debugger;
   // if the array is less than or equal to 1
   // it is already sorted
   if (arrOfNums.length <= 1) {

@@ -4,7 +4,7 @@ import { LinkedList } from './';
 describe('LinkedList', () => {
   describe('clear', () => {
     it('should be able to clear list', () => {
-      const testLinkedList = new LinkedList<Number>(1);
+      const testLinkedList = new LinkedList<number>(1);
 
       expect(testLinkedList.size).toEqual(1);
       expect(testLinkedList.head?.data).toEqual(1);
@@ -20,7 +20,7 @@ describe('LinkedList', () => {
 
   describe('pop', () => {
     it('should be able to remove list nodes from the end of the list', () => {
-      const testLinkedList = new LinkedList<Number>();
+      const testLinkedList = new LinkedList<number>();
 
       testLinkedList.push(2);
       testLinkedList.pop();
@@ -31,7 +31,7 @@ describe('LinkedList', () => {
 
   describe('push', () => {
     it('should be able to add new list nodes to the end of the list when head is not present', () => {
-      const testLinkedList = new LinkedList<Number>();
+      const testLinkedList = new LinkedList<number>();
 
       testLinkedList.push(2);
 
@@ -47,7 +47,7 @@ describe('LinkedList', () => {
     })
 
     it('should be able to add new list nodes to the end of the list when head is present', () => {
-      const testLinkedList = new LinkedList<Number>(1);
+      const testLinkedList = new LinkedList<number>(1);
 
       testLinkedList.push(2);
 
@@ -63,7 +63,7 @@ describe('LinkedList', () => {
 
   describe('shift', () => {
     it('should be able to remove list nodes from the beginning of the list when head is not present', () => {
-      const testLinkedList = new LinkedList<Number>();
+      const testLinkedList = new LinkedList<number>();
 
       testLinkedList.push(1);
       testLinkedList.push(2);
@@ -79,7 +79,7 @@ describe('LinkedList', () => {
     });
 
     it('should be able to remove list nodes from the beginning of the list when head is present', () => {
-      const testLinkedList = new LinkedList<Number>(1);
+      const testLinkedList = new LinkedList<number>(1);
 
       testLinkedList.push(2);
       testLinkedList.push(3);
@@ -94,11 +94,11 @@ describe('LinkedList', () => {
       expect(testLinkedList.size).toEqual(1);
     });
   });
-  
+
 
   describe('unshift', () => {
     it('should be able to add list nodes to the beginning of the list when head is not present', () => {
-      const testLinkedList = new LinkedList<Number>();
+      const testLinkedList = new LinkedList<number>();
 
       testLinkedList.unshift(1);
       testLinkedList.unshift(2);
@@ -109,7 +109,7 @@ describe('LinkedList', () => {
 
 
     it('should be able to add list nodes to the beginning of the list when head is present', () => {
-      const testLinkedList = new LinkedList<Number>(1);
+      const testLinkedList = new LinkedList<number>(1);
 
       testLinkedList.unshift(2);
       testLinkedList.unshift(3);

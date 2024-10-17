@@ -2,23 +2,27 @@
 // think of it as a line
 // whatever comes in first goes out first
 export class Queue<T> {
-  private storage: Array<T> = [];
+  private queue: Array<T> = [];
 
   // remove an item from the beginning 
-  dequeue(): T | undefined {
-    return this.storage.shift();
+  public dequeue(): T | undefined {
+    return this.queue.shift();
   }
 
   // add an item to the end
-  enqueue(item: T) {
-    this.storage.push(item);
+  public enqueue(item: T) {
+    this.queue.push(item);
   }
 
-  size(): number {
-    return this.storage.length;
+  public getQueue() {
+    return this.queue;
   }
 
-  toString(): string {
-    return this.storage.toString();
+  public isEmpty() {
+    return this.size() === 0;
+  }
+
+  public size(): number {
+    return this.queue.length;
   }
 }

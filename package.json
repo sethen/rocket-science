@@ -5,7 +5,7 @@
   "scripts": {
     "build": "rm -rf ./dist && tsc --build .",
     "debug": "npm run build && node --inspect-brk ./dist/src/index.js",
-    "test": "tsc --build && jest"
+    "test": "npm run build && tsc --build && jest"
   },
   "author": "",
   "license": "ISC",
