@@ -38,8 +38,9 @@ There are some general resources out there that I like -- various YouTube channe
 * [AlgoMap](https://algomap.io/)
 
 ## YouTube
-* [NeetCode](https://www.youtube.com/c/neetcode)
 * [Greg Hogg](https://www.youtube.com/@GregHogg)
+* [NeetCode](https://www.youtube.com/@neetcode)
+* [ThePrimeTimeagen](https://www.youtube.com/@ThePrimeTimeagen)
 
 
 # How to Use 
