@@ -204,8 +204,8 @@ You can find the implementation of a Stack at [./src/data-structures/stack/index
 A stack is a linear data structure that follows the Last In, First Out (LIFO) principle, meaning the last element added to the stack will be the first one removed. It is similar to a stack of plates, where the plate placed on top is the first to be taken off.
 
 ### Implemented Methods 
-* **getStack**
-  * Returns stack
+* **peak**
+  * Returns first element
 * **isEmpty**
   * Checks to see if stack is empty
 * **pop**

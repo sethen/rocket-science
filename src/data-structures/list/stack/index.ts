@@ -4,14 +4,14 @@
 export class Stack<T> {
   private stack: Array<T> = [];
 
-  public getStack() {
-    return this.stack;
-  }
-
   public isEmpty() {
     return this.size() === 0;
   }
 
+  public peak() {
+    return this.stack[ 0 ]
+  }
+ 
   // remove an item from the end
   public pop(): T | undefined {
     return this.stack.pop();
