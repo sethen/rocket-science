@@ -2,19 +2,19 @@ import type { ISinglyListNode } from '../singly-list-node';
 import { SinglyListNode } from '../singly-list-node';
 
 export class SinglyLinkedList<T> {
-  head: ISinglyListNode<T> | null;
+  head: ISinglyListNode<T> | undefined;
   size: number;
-  tail: ISinglyListNode<T> | null;
+  tail: ISinglyListNode<T> | undefined;
 
   constructor(data?: T) {
-    this.head = data ? new SinglyListNode<T>(data) : null;
+    this.head = data ? new SinglyListNode<T>(data) : undefined;
     this.tail = this.head;
     this.size = this.head ? 1 : 0;
   }
 
   public clear() {
-    this.head = null;
-    this.tail = null;
+    this.head = undefined;
+    this.tail = undefined;
     this.size = 0;
   }
 
@@ -70,7 +70,7 @@ export class SinglyLinkedList<T> {
         this.head = this.head.next;
       }
       else {
-        this.head = null;
+        this.head = undefined;
       }
 
       this.size -= 1;
@@ -88,5 +88,25 @@ export class SinglyLinkedList<T> {
 
     this.head = listNode;
     this.size += 1;
+  }
+
+  search(value: T): ISinglyListNode<T> | undefined {
+    if (!this.head) {
+      return;
+    }
+
+    let currentNode = this.head;
+
+    while (currentNode) {
+      if (currentNode.data === value) {
+        return currentNode;
+      }
+
+      if (!currentNode?.next) {
+        break;
+      }
+
+      currentNode = currentNode.next;
+    }
   }
 }

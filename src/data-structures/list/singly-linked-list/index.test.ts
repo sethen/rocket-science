@@ -13,8 +13,8 @@ describe('SinglyLinkedList', () => {
       testSinglyLinkedList.clear();
 
       expect(testSinglyLinkedList.size).toEqual(0);
-      expect(testSinglyLinkedList.head).toEqual(null);
-      expect(testSinglyLinkedList.tail).toEqual(null);
+      expect(testSinglyLinkedList.head).toEqual(undefined);
+      expect(testSinglyLinkedList.tail).toEqual(undefined);
     })
   })
 
@@ -61,6 +61,31 @@ describe('SinglyLinkedList', () => {
     })
   })
 
+  describe('search', () => {
+    it('should be able to search list nodes and find a value', () => {
+      const testSinglyLinkedList = new SinglyLinkedList<number>();
+      
+      testSinglyLinkedList.push(1);
+      testSinglyLinkedList.push(2);
+      testSinglyLinkedList.push(3);
+      testSinglyLinkedList.push(4);
+
+      expect(testSinglyLinkedList.search(4)).toEqual({ data: 4 });
+      expect(testSinglyLinkedList.search(3)).toEqual({ data: 3, next: { data: 4 } });
+    });
+
+
+    it('should be able to add list nodes to the beginning of the list when head is present', () => {
+      const testSinglyLinkedList = new SinglyLinkedList<number>(1);
+
+      testSinglyLinkedList.unshift(2);
+      testSinglyLinkedList.unshift(3);
+
+      expect(testSinglyLinkedList.head?.data).toEqual(3);
+      expect(testSinglyLinkedList.size).toEqual(3);
+    });
+  });
+
   describe('shift', () => {
     it('should be able to remove list nodes from the beginning of the list when head is not present', () => {
       const testSinglyLinkedList = new SinglyLinkedList<number>();
@@ -74,7 +99,7 @@ describe('SinglyLinkedList', () => {
 
       testSinglyLinkedList.shift();
 
-      expect(testSinglyLinkedList.head).toEqual(null);
+      expect(testSinglyLinkedList.head).toEqual(undefined);
       expect(testSinglyLinkedList.size).toEqual(0);
     });
 
