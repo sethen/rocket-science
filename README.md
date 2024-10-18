@@ -11,14 +11,14 @@ This is a repository full of implementations for common algorithms and data stru
   * [YouTube](#youtube)
 * [How to Use](#how-to-use)
 * [Algorithms](#algorithms)
-  * [Misc](#misc)
-    * [Two Sum](#two-sum)
   * [Search](#search)
     * [Binary Search](#binary-search)
   * [Sliding Window](#sliding-window)
     * [Max Sub Array](#max-sub-array)
   * [Sort](#sort)
     * [Bubble Sort](#bubble-sort)
+  * [Sum](#sum)
+    * [Two Sum](#two-sum)
 * [Data Structures](#data-structures)
   * [List](#list)
     * [Queue](#queue)
@@ -54,11 +54,11 @@ This repository is simple and doesn't require much in the way of usage.  You nee
 # Algorithms
 You can find all of these implementations at [./src/algorithms](./src/algorithms)
 
-## Misc
-You can find all of these implementations at [./src/algorithms/misc](./src/algorithms/misc)
+## Sum
+You can find all of these implementations at [./src/algorithms/misc](./src/algorithms/sum)
 
 ## Two Sum 
-You can find the implementation of Two Sum at [./src/algorithms/two-sum/index.ts](./src/algorithms/two-sum/index.ts)
+You can find the implementation of Two Sum at [./src/algorithms/sum/two-sum/index.ts](./src/algorithms/sum/two-sum/index.ts)
 
 Two Sum problem involves finding two numbers in an array that add up to a given target. The goal is to return the indices of these two numbers.  A common, optimized approach uses a hash map to store the numbers and their indices as you iterate through the array. For each number, you calculate the complement (target minus the current number) and check if it's already in the map. If it is, you return the indices of the complement and the current number. 
 
@@ -120,19 +120,19 @@ You can find all of these implementations at [./src/algorithms/sliding-window](.
 ## Max Sub Array
 You can find the implementation of Max Sub Array at [./src/algorithms/sliding-window/max-sub-array/index.ts](./src/algorithms/sliding-window/max-sub-array/index.ts)
 
-The Maximum Subarray problem involves finding the contiguous subarray within a given array of integers that has the largest sum.
+The Max Sub Array problem involves finding the contiguous subarray within a given array of integers that has the largest sum.
 
 ### Steps:
-* Start from the first element and keep a running sum of the current subarray.
-* If the running sum becomes negative, reset it to the current element (because a negative sum would reduce the overall maximum).
-* Track the maximum sum encountered during the process.
-* Continue until all elements have been processed.
+* Start from the first element and keep a running sum of the current sub array
+* If the running sum becomes negative, reset it to the current element (because a negative sum would reduce the overall max)
+* Track the max sum encountered during the process
+* Continue until all elements have been processed
 
 ### Example:
-For an array `[-2, 1, -3, 4, -1, 2, 1, -5, 4]`, the maximum subarray is `[4, -1, 2, 1]`, with a sum of `6`.
+For an array `[-2, 1, -3, 4, -1, 2, 1, -5, 4]`, the max sub array is `[4, -1, 2, 1]`, with a sum of `6`.
 
 ### Time Complexity:
-**O(n)**, where n is the number of elements, using Kadane's Algorithm, which processes each element once.  The maximum subarray problem is useful in scenarios that require finding the largest sum in a sequence of numbers, such as financial analyses or performance evaluations.
+**O(n)**, where n is the number of elements, using Kadane's Algorithm, which processes each element once.  The max sub array problem is useful in scenarios that require finding the largest sum in a sequence of numbers, such as financial analyses or performance evaluations.
 
 ### Resources
 * Python implementation - [Maximum Subarray - Amazon Coding Interview Question - Leetcode 53 - Python](https://www.youtube.com/watch?v=5WZl3MMT0Eg)
