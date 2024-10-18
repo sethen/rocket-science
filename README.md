@@ -29,7 +29,7 @@ This is a repository full of implementations for common algorithms and data stru
 There are some general resources out there that I like -- various YouTube channels, articles and the like.  Feel free to look through them:
 
 ## Articles
-* [14 Patterns to Ace Any Coding Interview Question](https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed)
+* [Extra, Extra - Read All About It: Nearly All Binary Searches and Mergesorts are Broken](https://research.google/blog/extra-extra-read-all-about-it-nearly-all-binary-searches-and-mergesorts-are-broken/)
 
 ## Books
 * [Grokking Algorithms, Second Edition](https://www.amazon.com/Grokking-Algorithms-Second-Aditya-Bhargava/dp/1633438538)
@@ -204,10 +204,10 @@ You can find the implementation of a Stack at [./src/data-structures/stack/index
 A stack is a linear data structure that follows the Last In, First Out (LIFO) principle, meaning the last element added to the stack will be the first one removed. It is similar to a stack of plates, where the plate placed on top is the first to be taken off.
 
 ### Implemented Methods 
-* **peak**
-  * Returns first element
 * **isEmpty**
   * Checks to see if stack is empty
+* **peak**
+  * Returns first element
 * **pop**
   * Removes element from the end of the stack
 * **push(value)**
