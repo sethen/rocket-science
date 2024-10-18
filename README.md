@@ -5,6 +5,10 @@ This is a repository full of implementations for common algorithms and data stru
 # Tables of Contents
 
 * [General Resources I Like](#general-resources-i-like)
+  * [Articles](#articles)
+  * [Books](#books)
+  * [Websites](#websites)
+  * [YouTube](#youtube)
 * [How to Use](#how-to-use)
 * [Algorithms](#algorithms)
   * [Misc](#misc)
@@ -26,6 +30,9 @@ There are some general resources out there that I like -- various YouTube channe
 
 ## Articles
 * [14 Patterns to Ace Any Coding Interview Question](https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed)
+
+## Books
+* [Grokking Algorithms, Second Edition](https://www.amazon.com/Grokking-Algorithms-Second-Aditya-Bhargava/dp/1633438538)
 
 ## Websites
 * [AlgoMap](https://algomap.io/)
