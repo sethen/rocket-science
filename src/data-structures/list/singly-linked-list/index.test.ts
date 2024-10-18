@@ -18,6 +18,34 @@ describe('SinglyLinkedList', () => {
     })
   })
 
+  describe('findByIndex', () => {
+    it('should be able to findByIndex to find a node at index', () => {
+      const testSinglyLinkedList = new SinglyLinkedList<number>();
+      
+      testSinglyLinkedList.push(1);
+      testSinglyLinkedList.push(2);
+      testSinglyLinkedList.push(3);
+      testSinglyLinkedList.push(4);
+
+      expect(testSinglyLinkedList.findByIndex(3)).toEqual({ data: 4 });
+      expect(testSinglyLinkedList.findByIndex(2)).toEqual({ data: 3, next: { data: 4 } });
+    });
+  });
+
+  describe('findByValue', () => {
+    it('should be able to findByValue to find a node with a value', () => {
+      const testSinglyLinkedList = new SinglyLinkedList<number>();
+      
+      testSinglyLinkedList.push(1);
+      testSinglyLinkedList.push(2);
+      testSinglyLinkedList.push(3);
+      testSinglyLinkedList.push(4);
+
+      expect(testSinglyLinkedList.findByValue(4)).toEqual({ data: 4 });
+      expect(testSinglyLinkedList.findByValue(3)).toEqual({ data: 3, next: { data: 4 } });
+    });
+  });
+
   describe('pop', () => {
     it('should be able to remove list nodes from the end of the list', () => {
       const testSinglyLinkedList = new SinglyLinkedList<number>();
@@ -59,31 +87,6 @@ describe('SinglyLinkedList', () => {
       expect(testSinglyLinkedList.size).toEqual(3);
       expect(testSinglyLinkedList.tail?.data).toEqual(3);
     })
-  })
-
-  describe('search', () => {
-    it('should be able to search list nodes and find a value', () => {
-      const testSinglyLinkedList = new SinglyLinkedList<number>();
-      
-      testSinglyLinkedList.push(1);
-      testSinglyLinkedList.push(2);
-      testSinglyLinkedList.push(3);
-      testSinglyLinkedList.push(4);
-
-      expect(testSinglyLinkedList.search(4)).toEqual({ data: 4 });
-      expect(testSinglyLinkedList.search(3)).toEqual({ data: 3, next: { data: 4 } });
-    });
-
-
-    it('should be able to add list nodes to the beginning of the list when head is present', () => {
-      const testSinglyLinkedList = new SinglyLinkedList<number>(1);
-
-      testSinglyLinkedList.unshift(2);
-      testSinglyLinkedList.unshift(3);
-
-      expect(testSinglyLinkedList.head?.data).toEqual(3);
-      expect(testSinglyLinkedList.size).toEqual(3);
-    });
   });
 
   describe('shift', () => {

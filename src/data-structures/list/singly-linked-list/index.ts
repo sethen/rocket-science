@@ -65,16 +65,14 @@ export class SinglyLinkedList<T> {
   }
 
   public shift() {
-    if (this.head) {
-      if (this.head.next) {
-        this.head = this.head.next;
-      }
-      else {
-        this.head = undefined;
-      }
-
-      this.size -= 1;
+    if (this.head?.next) {
+      this.head = this.head.next;
     }
+    else {
+      this.head = undefined;
+    }
+
+    this.size -= 1;
   }
 
   public unshift(data: T) {
@@ -90,7 +88,29 @@ export class SinglyLinkedList<T> {
     this.size += 1;
   }
 
-  search(value: T): ISinglyListNode<T> | undefined {
+  findByIndex(index: number): ISinglyListNode<T> | undefined {
+    if (!this.head) {
+      return;
+    }
+
+    let currentNode = this.head;
+    let counter = 0;
+
+    while (currentNode && counter <= index) {
+      if (counter === index) {
+        return currentNode;
+      }
+
+      if (!currentNode?.next) {
+        break;
+      }
+
+      currentNode = currentNode.next;
+      counter += 1;
+    }
+  }
+
+  findByValue(value: T): ISinglyListNode<T> | undefined {
     if (!this.head) {
       return;
     }

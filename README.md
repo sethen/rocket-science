@@ -180,10 +180,16 @@ You can find the implementation of a Queue at [./src/data-structures/list/queue/
 A queue is a linear data structure that follows the First In, First Out (FIFO) principle, meaning the first element added to the queue will be the first one to be removed. It is similar to a real-life queue, like waiting in line—those who arrive first get served first.
 
 ### Key Operations
-* **Enqueue**: Add an element to the back of the queue (think push in arrays)
-* **Dequeue**: Remove an element from the front of the queue (think shift in arrays)
-* **Peek**: Retrieve the element at the front of the queue without removing it
-* **IsEmpty**: Check if the queue is empty (looks at the length of the array)
+* **dequeue**
+  * Remove an element from the front of the queue (think shift in arrays)
+* **enqueue(value)**
+  * Add an element to the back of the queue (think push in arrays)
+* **isEmpty**
+  * Check if the queue is empty (looks at the length of the array)
+* **peek**
+  * Retrieve the element at the front of the queue without removing it
+* **size**
+  * Retrieve the size of the queue
 
 ### Use Cases
 * Scheduling tasks in operating systems (like managing print jobs or CPU tasks)
@@ -197,11 +203,15 @@ You can find the implementation of a Stack at [./src/data-structures/stack/index
 
 A stack is a linear data structure that follows the Last In, First Out (LIFO) principle, meaning the last element added to the stack will be the first one removed. It is similar to a stack of plates, where the plate placed on top is the first to be taken off.
 
-### Key Operations
-* **Push**: Add an element to the top of the stack
-* **Pop**: Remove and return the top element
-* **Peek**: Retrieve the top element without removing it
-* **IsEmpty**: Check if the stack is empty
+### Implemented Methods 
+* **getStack**
+  * Returns stack
+* **isEmpty**
+  * Checks to see if stack is empty
+* **pop**
+  * Removes element from the end of the stack
+* **push(value)**
+  * Add value to the end of the stack
 
 ### Use Cases
 * Function call stack in programming
@@ -214,15 +224,26 @@ A stack is a linear data structure that follows the Last In, First Out (LIFO) pr
 You can find the implementation of a Singly Linked List at [./src/data-structures/singly-linked-list/index.ts](./src/data-structures/list/singly-linked-list/index.ts)
 
 A Singly Linked List is a linear data structure made up of nodes, where each node contains two elements:
-* **Data**: The value or content of the node
-* **Pointer/Reference**: A link to the next node in the sequence
+* **data**: The value or content of the node
+* **next**: A link to the next node in the sequence
 
 Unlike arrays, linked lists do not store elements in contiguous memory locations. Instead, each element (node) points to the next location in memory.
 
-### Key Operations
-* **Insert**: Add a node to the list
-* **Delete**: Remove a node from the list
-* **Search**: Find a node based on its value
+### Implemented Methods
+* **clear**
+  * Clears list entirely
+* **pop**
+  * Removes last element in the list
+* **push(value)**
+  * Add element to the end of the list
+* **findByIndex(index)**
+  * Find a node based on its index
+* **findByValue(value)**
+  * Find a node based on its value
+* **shift**
+  * Removes element from the beginning of the list
+* **unshift(value)**
+  * Add element to the beginning of the list
 
 ### Use Cases:
 * Efficient insertions and deletions at any position
