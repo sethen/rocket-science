@@ -44,7 +44,7 @@ There are some general resources out there that I like -- various YouTube channe
 
 
 # How to Use 
-This repository is simple and doesn't require much in the way of usage.  You need `Node.js` installed and need to run `npm install` to get everything installed.  You can use `npm run test` for testing, `npm run build` for building and `npm run debug` to run the node debugger in chrome.
+This repository is simple and doesn't require much in the way of usage.  You need `Node.js` installed and need to run `npm install` to get everything installed.  Then you can use the following:
 
 * `npm run build` for building the project
 * `npm run test` to run unit tests
@@ -76,7 +76,7 @@ For an array `[2, 7, 11, 15]` and target `9`:
 * Return indices `[0, 1]`.
 
 ### Time Complexity
-O(n), where n is the number of elements, because the array is traversed once, and hash map operations take constant time.  Two Sum is efficient for large datasets due to its use of a hash map, making it a common interview question and practical solution for sum-based problems.
+`O(n)`, where n is the number of elements, because the array is traversed once, and hash map operations take constant time.  Two Sum is efficient for large datasets due to its use of a hash map, making it a common interview question and practical solution for sum-based problems.
 
 ### Resources
 * Python implementation - [Short](https://www.youtube.com/shorts/pFag4mBsO1I)
@@ -107,7 +107,7 @@ For a sorted array `[1, 3, 5, 7, 9]` and target `7`:
 * Compare with middle element `7`, target is found, return index `3`.
 
 ### Time Complexity
-Binary search operates in **O(log n)** time complexity, making it much faster than linear search for large datasets, but it requires the data to be sorted.  **O(log n)**, where n is the number of elements, because the search space is halved with each step.
+Binary search operates in `O(log n)` time complexity, making it much faster than linear search for large datasets, but it requires the data to be sorted.  `O(log n)`, where n is the number of elements, because the search space is halved with each step.
 
 ### Resources
 * JavaScript implementation - [Binary Search in 100 Seconds](https://www.youtube.com/watch?v=MFhxShGxHWch)
@@ -132,7 +132,7 @@ The Max Sub Array problem involves finding the contiguous subarray within a give
 For an array `[-2, 1, -3, 4, -1, 2, 1, -5, 4]`, the max sub array is `[4, -1, 2, 1]`, with a sum of `6`.
 
 ### Time Complexity:
-**O(n)**, where n is the number of elements, using Kadane's Algorithm, which processes each element once.  The max sub array problem is useful in scenarios that require finding the largest sum in a sequence of numbers, such as financial analyses or performance evaluations.
+`O(n)`, where n is the number of elements, using Kadane's Algorithm, which processes each element once.  The max sub array problem is useful in scenarios that require finding the largest sum in a sequence of numbers, such as financial analyses or performance evaluations.
 
 ### Resources
 * Python implementation - [Maximum Subarray - Amazon Coding Interview Question - Leetcode 53 - Python](https://www.youtube.com/watch?v=5WZl3MMT0Eg)
