@@ -18,6 +18,7 @@ This is a repository full of implementations for common algorithms and data stru
     * [Max Sub Array](#max-sub-array)
   * [Sort](#sort)
     * [Bubble Sort](#bubble-sort)
+    * [Insertion Sort](#insertion-sort)
     * [Merge Sort](#merge-sort)
     * [Quick Sort](#quick-sort)
   * [Sum](#sum)
@@ -177,6 +178,36 @@ For an array `[5, 3, 8, 4, 2]`:
 * Java implementation - [Learn Bubble Sort in 7 minutes](https://www.youtube.com/watch?v=Dv4qLJcxus8)
 
 
+## Insertion Sort
+You can find the implementation of Insertion Sort at [./src/algorithms/sort/insertion-sort/index.ts](./src/algorithms/sort/insertion-sort/index.ts)
+
+Insertion Sort is a simple, comparison-based sorting algorithm that builds a sorted array (or list) one element at a time by repeatedly picking an element from the unsorted portion and inserting it into its correct position in the sorted portion.
+
+### Steps:
+* Start from the second element (assuming the first is already sorted)
+* Compare the current element with the elements in the sorted portion
+* Shift elements in the sorted portion to the right to create space
+* Insert the current element into its correct position.
+* Repeat until all elements are sorted
+
+### Example:
+For an array `[5, 3, 8, 4, 2]`:
+
+* First, `3` is inserted before `5`, resulting in `[3, 5, 8, 4, 2]`
+* Then `8` stays in place, and `4` is inserted between `3` and `5`
+* Finally, `2` is inserted at the start, giving `[2, 3, 4, 5, 8]`
+
+### Time Complexity:
+* Best case: `O(n)` (when the array is already sorted)
+* Worst and Average case: `O(n²)` (when the array is in reverse order or random)
+
+### Use Cases:
+Insertion sort is efficient for small datasets or arrays that are already mostly sorted. It's easy to implement and understand but not suitable for large datasets due to its quadratic time complexity.
+
+### Resources
+* Java Implementation - [Learn Insertion Sort in 7 minutes](https://www.youtube.com/watch?v=8mJ-OhcfpYg)
+
+
 ## Merge Sort
 You can find the implementation of Merge Sort at [./src/algorithms/sort/merge-sort/index.ts](./src/algorithms/sort/merge-sort/index.ts)
 
@@ -198,10 +229,11 @@ For an array `[3, 1, 4, 1, 5, 9, 2, 6]`:
 ### Time Complexity:
 * `O(n log n)` in all cases (best, worst, and average), making it highly efficient for large datasets
 
+### Use Cases
 Merge Sort is stable and guarantees optimal performance, making it ideal for sorting linked lists or for scenarios where guaranteed `O(n log n)` performance is required. However, it requires additional memory for the merging process.
 
 ## Resources
-* [Learn Merge Sort in 13 Minutes](https://www.youtube.com/watch?v=3j0SWDX4AtU)
+* Java Implementation - [Learn Merge Sort in 13 Minutes](https://www.youtube.com/watch?v=3j0SWDX4AtU)
 
 
 ## Quick Sort
@@ -226,10 +258,11 @@ For an array `[3, 6, 8, 10, 1, 2, 1]`:
 * Average case: `O(n log n)`
 * Worst case: `O(n²)` (when the pivot is poorly chosen, like the smallest or largest element).
 
+### Use Cases
 Quick Sort is known for its fast performance and is widely used in practice, particularly for large datasets, because of its average-case efficiency and in-place sorting.
 
 ### Resources
-* [Learn Quick Sort in 13 Minutes](https://www.youtube.com/watch?v=Vtckgz38QHs)
+* Java Implementation - [Learn Quick Sort in 13 Minutes](https://www.youtube.com/watch?v=Vtckgz38QHs)
 
 
 # Data Structures
