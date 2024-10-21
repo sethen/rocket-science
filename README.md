@@ -55,6 +55,8 @@ There are some general resources out there that I like -- various YouTube channe
 # Time & Space Complexity
 It's important to know about Time & Space Complexity to understand how these algorithms perform as their input grows.  Check out [Time & Space Complexity - Big O Notation](https://youtu.be/aWKEBEg55ps?si=VvR7Yymf97-RwK1T) by Greg Hogg.
 
+![Time Complexity Chart](/assets/images/time-complexity-chart.png)
+
 
 # How to Use 
 This repository is simple and doesn't require much in the way of usage.  You need `Node.js` installed and need to run `npm install` to get everything installed.  Then you can use the following:
