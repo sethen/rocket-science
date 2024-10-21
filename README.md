@@ -27,6 +27,8 @@ This is a repository full of implementations for common algorithms and data stru
     * [Queue](#queue)
     * [Singly Linked List](#singly-linked-list)
     * [Stack](#stack)
+  * [Tree](#tree)
+    * [Binary Search Tree](#binary-search-tree)
 
 # General Resources I Like 
 There are some general resources out there that I like -- various YouTube channels, articles and the like.  Feel free to look through them:
@@ -310,3 +312,32 @@ Unlike arrays, linked lists do not store elements in contiguous memory locations
 ### Use Cases:
 * Efficient insertions and deletions at any position
 * Dynamic memory allocation where size can grow or shrink as needed
+
+
+# Tree
+You can find all of these implementations at [./src/data-structures/tree](./src/data-structures/tree)
+
+## Binary Search Tree
+You can find the implementation of a Binary Search Tree at [./src/data-structures/tree/binary-search-tree/index.ts](./src/data-structures/tree/binary-search-tree/index.ts)
+
+A Binary Search Tree (BST) is a node-based data structure where each node has at most two children, referred to as the left and right child. It is designed to efficiently store and retrieve data in sorted order:
+
+* **left**: Contains nodes with values less than the node’s value (also a binary search tree)
+* **right**: Contains nodes with values greater than the node’s value (also a binary search tree)
+
+### Implemented Methods
+**insert(value)**:
+  * Add a node in its correct position while maintaining the BST property
+
+### Example
+The root is `5`, with `3` and `7` as its children:
+
+* `3` has children `2` and `4`
+* `7` has children `6` and `8`
+
+### Time Complexity:
+* Best/Average case: `O(log n)` for search, insert, and delete
+* Worst case: `O(n)`, if the tree becomes unbalanced (e.g., a sorted input)
+
+### Use Cases
+Binary Search Trees are commonly used in search-related algorithms and data structures due to their ability to quickly retrieve, insert, and delete elements while maintaining order.
