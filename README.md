@@ -11,6 +11,7 @@ This is a repository full of implementations for common algorithms and data stru
   * [Websites](#websites)
   * [YouTube](#youtube)
 * [How to Use](#how-to-use)
+* [Time & Space Complexity](#time--space-complexity)
 * [Algorithms](#algorithms)
   * [Search](#search)
     * [Binary Search](#binary-search)
@@ -50,6 +51,9 @@ There are some general resources out there that I like -- various YouTube channe
 * [Greg Hogg](https://www.youtube.com/@GregHogg)
 * [NeetCode](https://www.youtube.com/@neetcode)
 * [ThePrimeTimeagen](https://www.youtube.com/@ThePrimeTimeagen)
+
+# Time & Space Complexity
+It's important to know about Time & Space Complexity to understand how these algorithms perform as their input grows.  Check out [Time & Space Complexity - Big O Notation](https://youtu.be/aWKEBEg55ps?si=VvR7Yymf97-RwK1T) by Greg Hogg.
 
 
 # How to Use 
