@@ -18,6 +18,7 @@ This is a repository full of implementations for common algorithms and data stru
     * [Max Sub Array](#max-sub-array)
   * [Sort](#sort)
     * [Bubble Sort](#bubble-sort)
+    * [Merge Sort](#merge-sort)
     * [Quick Sort](#quick-sort)
   * [Sum](#sum)
     * [Two Sum](#two-sum)
@@ -174,6 +175,33 @@ For an array `[5, 3, 8, 4, 2]`:
 * Java implementation - [Learn Bubble Sort in 7 minutes](https://www.youtube.com/watch?v=Dv4qLJcxus8)
 
 
+## Merge Sort
+You can find the implementation of Merge Sort at [./src/algorithms/sort/merge-sort/index.ts](./src/algorithms/sort/merge-sort/index.ts)
+
+Merge Sort is a comparison-based sorting algorithm that follows the divide-and-conquer approach. It divides the array into smaller subarrays, sorts them individually, and then merges them back together in sorted order.
+
+### Steps:
+* Divide the array into two halves until each subarray has only one element
+* Recursively sort each half
+* Merge the two sorted halves by comparing elements and arranging them in the correct order
+* Repeat the merging process until all subarrays are combined into a fully sorted array.
+
+### Example:
+For an array `[3, 1, 4, 1, 5, 9, 2, 6]`:
+
+* Divide into `[3, 1, 4, 1]` and `[5, 9, 2, 6]`
+* Recursively divide and sort each half.
+* Merge sorted subarrays to get the fully sorted array [1, 1, 2, 3, 4, 5, 6, 9].
+
+### Time Complexity:
+* `O(n log n)` in all cases (best, worst, and average), making it highly efficient for large datasets
+
+Merge Sort is stable and guarantees optimal performance, making it ideal for sorting linked lists or for scenarios where guaranteed `O(n log n)` performance is required. However, it requires additional memory for the merging process.
+
+## Resources
+* [Learn Merge Sort in 13 Minutes](https://www.youtube.com/watch?v=3j0SWDX4AtU)
+
+
 ## Quick Sort
 You can find the implementation of Quick Sort at [./src/algorithms/sort/quick-sort/index.ts](./src/algorithms/sort/quick-sort/index.ts)
 
@@ -197,6 +225,9 @@ For an array `[3, 6, 8, 10, 1, 2, 1]`:
 * Worst case: `O(n²)` (when the pivot is poorly chosen, like the smallest or largest element).
 
 Quick Sort is known for its fast performance and is widely used in practice, particularly for large datasets, because of its average-case efficiency and in-place sorting.
+
+### Resources
+* [Learn Quick Sort in 13 Minutes](https://www.youtube.com/watch?v=Vtckgz38QHs)
 
 
 # Data Structures
