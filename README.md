@@ -7,6 +7,7 @@ This is a repository full of implementations for common algorithms and data stru
 * [General Resources I Like](#general-resources-i-like)
   * [Articles](#articles)
   * [Books](#books)
+  * [Playlists](#playlists)
   * [Websites](#websites)
   * [YouTube](#youtube)
 * [How to Use](#how-to-use)
@@ -17,6 +18,7 @@ This is a repository full of implementations for common algorithms and data stru
     * [Max Sub Array](#max-sub-array)
   * [Sort](#sort)
     * [Bubble Sort](#bubble-sort)
+    * [Quick Sort](#quick-sort)
   * [Sum](#sum)
     * [Two Sum](#two-sum)
 * [Data Structures](#data-structures)
@@ -33,6 +35,9 @@ There are some general resources out there that I like -- various YouTube channe
 
 ## Books
 * [Grokking Algorithms, Second Edition](https://www.amazon.com/Grokking-Algorithms-Second-Aditya-Bhargava/dp/1633438538)
+
+## Playlists
+* (Data Structures & Algorithms in Python - The Complete Pathway)[https://www.youtube.com/watch?v=aWKEBEg55ps&list=PLKYEe2WisBTFEr6laH5bR2J19j7sl5O8R]
 
 ## Websites
 * [AlgoMap](https://algomap.io/)
@@ -167,6 +172,31 @@ For an array `[5, 3, 8, 4, 2]`:
 
 ### Resources
 * Java implementation - [Learn Bubble Sort in 7 minutes](https://www.youtube.com/watch?v=Dv4qLJcxus8)
+
+
+## Quick Sort
+You can find the implementation of Quick Sort at [./src/algorithms/sort/quick-sort/index.ts](./src/algorithms/sort/quick-sort/index.ts)
+
+Quick Sort is a highly efficient, comparison-based sorting algorithm that uses the divide-and-conquer approach to sort elements. It works by selecting a "pivot" element and partitioning the array so that all elements smaller than the pivot come before it, and all elements larger come after it.
+
+### Steps:
+* Choose a pivot element from the array (the implementation chooses the last index
+* Partition the array by rearranging elements: elements less than the pivot go to its left, and elements greater go to its right
+* Recursively apply the same process to the left and right subarrays
+* Continue this until each subarray has only one element or is empty, at which point the array is sorted
+
+### Example:
+For an array `[3, 6, 8, 10, 1, 2, 1]`:
+
+* Choose 3 as the pivot
+* Partition to get `[1, 2, 1]` (less than 3) and `[6, 8, 10]` (greater than `3`)
+* Recursively sort the subarrays
+
+### Time Complexity:
+* Average case: `O(n log n)`
+* Worst case: `O(n²)` (when the pivot is poorly chosen, like the smallest or largest element).
+
+Quick Sort is known for its fast performance and is widely used in practice, particularly for large datasets, because of its average-case efficiency and in-place sorting.
 
 
 # Data Structures
