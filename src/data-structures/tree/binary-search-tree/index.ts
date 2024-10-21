@@ -16,7 +16,7 @@ export class BinarySearchTree<T> {
       // set the root
       this.root = newNode;
 
-      return this;
+      return;
     }
     else {
       // cursor for current root
@@ -38,7 +38,7 @@ export class BinarySearchTree<T> {
             // the tree node goes on the left
             current.left = newNode;
 
-            return this;
+            return;
           }
 
           // update current to the left node
@@ -50,7 +50,7 @@ export class BinarySearchTree<T> {
             // the tree node goes on the right
             current.right = newNode;
 
-            return this;
+            return;
           } 
 
           // update current to the right node

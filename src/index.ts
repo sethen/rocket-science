@@ -15,7 +15,7 @@ export { BinarySearchTree }
 
 // algorithms
 // misc
-import { twoSum } from './algorithms/misc/two-sum';
+import { twoSum } from './algorithms/sum/two-sum';
 
 export { twoSum }
 
