@@ -274,8 +274,22 @@ Quick Sort is known for its fast performance and is widely used in practice, par
 # Data Structures
 Here are all of the data structures that are implemented in this repository.
 
+You can find all of these implementations at [./src/data-structures](./src/data-structures)
+
+
+| Operation                   | Array (static)/List (dynamic) | String (immutable) |
+| --------------------------- | ----------------------------- | ------------------ |
+| Append to end               | `*O(n)`                       | `O(n)`             |
+| Popping from end            | `O(1)`                        | `O(n)`             |
+| Insertion, not from end     | `O(n)`                        | `O(n)`             |
+| Deletion, not from end      | `O(n)`                        | `O(n)`             |
+| Modifying an element        | `O(1)`                        | `O(n)`             |
+| Random access               | `O(1)`                        | `O(1)`             |
+| Checking if element exists  | `O(n)`                        | `O(n)`             |
+ 
+
 ## List
-You can find all of these implementations at [./src/algorithms/list](./src/algorithms/list)
+You can find all of these implementations at [./src/data-structures/list](./src/data-structures/list)
 
 ## Queue
 You can find the implementation of a Queue at [./src/data-structures/list/queue/index.ts](./src/data-structures/list/queue/index.ts)
