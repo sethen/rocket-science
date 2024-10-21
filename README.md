@@ -37,7 +37,7 @@ There are some general resources out there that I like -- various YouTube channe
 * [Grokking Algorithms, Second Edition](https://www.amazon.com/Grokking-Algorithms-Second-Aditya-Bhargava/dp/1633438538)
 
 ## Playlists
-* (Data Structures & Algorithms in Python - The Complete Pathway)[https://www.youtube.com/watch?v=aWKEBEg55ps&list=PLKYEe2WisBTFEr6laH5bR2J19j7sl5O8R]
+* [Data Structures & Algorithms in Python - The Complete Pathway](https://www.youtube.com/watch?v=aWKEBEg55ps&list=PLKYEe2WisBTFEr6laH5bR2J19j7sl5O8R)
 
 ## Websites
 * [AlgoMap](https://algomap.io/)
