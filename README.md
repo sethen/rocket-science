@@ -24,8 +24,9 @@ This is a repository full of implementations for common algorithms and data stru
     * [Quick Sort](#quick-sort)
   * [Sum](#sum)
     * [Two Sum](#two-sum)
-  * [Traversal DFS](#traversal-dfs)
-    * [Preorder](#preorder)
+  * [Traversal](#traversal)
+    * [DFS](#dfs)
+      * [Preorder](#preorder)
 * [Data Structures](#data-structures)
   * [List](#list)
     * [Queue](#queue)
@@ -72,15 +73,20 @@ This repository is simple and doesn't require much in the way of usage.  You nee
 You can find all of these implementations at [./src/algorithms](./src/algorithms)
 
 
-## Traversal DFS 
-You can find all of these implementations at [./src/algorithms/traversal/dfs](./src/algorithms/traversal/dfs)
+## Traversal 
+You can find all of the implementations of **Traversal** at [./src/algorithms/traversal](./src/algorithms/traversal)
 
-Depth-First Search (DFS) is a graph or tree traversal algorithm that explores as far down a branch as possible before backtracking. It starts at a source node and explores each branch of the graph or tree by visiting child nodes recursively or using a stack for the iterative version.
+**Traversal** refers to the process of visiting all the nodes or elements in a data structure, such as a tree or graph, in a systematic way. The goal is to access or process each element exactly once.
+
+## DFS
+You can find all of the implementations **DFS** at [./src/algorithms/traversal/dfs](./src/algorithms/traversal/dfs)
+
+**Depth-First Search or DFS** is a graph or tree traversal algorithm that explores as far down a branch as possible before backtracking. It starts at a source node and explores each branch of the graph or tree by visiting child nodes recursively or using a stack for the iterative version.
 
 ## Preorder 
-You can find the implementation of Traversal Depth First Search Preorder at [./src/algorithms/traversal/dfs/preorder](./src/algorithms/traversal/dfs/preorder/index.ts)
+You can find the implementation of **Preorder** at [./src/algorithms/traversal/dfs/preorder](./src/algorithms/traversal/dfs/preorder/index.ts)
 
-Pre-order Depth-First Search (DFS) is a tree traversal technique where you visit nodes in a specific order: first the current node, then its left subtree, followed by its right subtree. This traversal explores the entire left branch before moving to the right branch -- `node` -> `left` -> `right`.
+**Preorder**  is a DFS tree traversal technique where you visit nodes in a specific order: first the current node, then its left subtree, followed by its right subtree (`node` -> `left` -> `right`). This traversal explores the entire left branch before moving to the right branch.
 
 ### Steps
 For the binary tree:
@@ -93,7 +99,7 @@ For the binary tree:
 4   5
 ```
 
-The pre-order traversal would be:
+The preorder traversal would be:
 
 * Start at the root `1`.
 * Traverse the left subtree:
@@ -114,12 +120,12 @@ Pre-order traversal is useful in scenarios where you need to explore nodes befor
 
 
 ## Sum
-You can find all of these implementations at [./src/algorithms/sum](./src/algorithms/sum)
+You can find all of the implementations of **Sum** at [./src/algorithms/sum](./src/algorithms/sum)
 
 ## Two Sum 
-You can find the implementation of Two Sum at [./src/algorithms/sum/two-sum/index.ts](./src/algorithms/sum/two-sum/index.ts)
+You can find the implementation of **Two Sum** at [./src/algorithms/sum/two-sum/index.ts](./src/algorithms/sum/two-sum/index.ts)
 
-Two Sum problem involves finding two numbers in an array that add up to a given target. The goal is to return the indices of these two numbers.  A common, optimized approach uses a hash map to store the numbers and their indices as you iterate through the array. For each number, you calculate the complement (target minus the current number) and check if it's already in the map. If it is, you return the indices of the complement and the current number. 
+**Two Sum** problem involves finding two numbers in an array that add up to a given target. The goal is to return the indices of these two numbers.  A common, optimized approach uses a hash map to store the numbers and their indices as you iterate through the array. For each number, you calculate the complement (target minus the current number) and check if it's already in the map. If it is, you return the indices of the complement and the current number. 
 
 ### Steps
 * Iterate through the array while keeping track of each number's complement (target minus the current number)
@@ -135,7 +141,7 @@ For an array `[2, 7, 11, 15]` and target `9`:
 * Return indices `[0, 1]`.
 
 ### Time Complexity
-`O(n)`, where n is the number of elements, because the array is traversed once, and hash map operations take constant time.  Two Sum is efficient for large datasets due to its use of a hash map, making it a common interview question and practical solution for sum-based problems.
+`O(n)`, where n is the number of elements, because the array is traversed once, and hash map operations take constant time.  **Two Sum** is efficient for large datasets due to its use of a hash map, making it a common interview question and practical solution for sum-based problems.
 
 ### Resources
 * Python implementation - [Short](https://www.youtube.com/shorts/pFag4mBsO1I)
@@ -144,12 +150,12 @@ For an array `[2, 7, 11, 15]` and target `9`:
 
 
 ## Search
-You can find all of these implementations at [./src/algorithms/search](./src/algorithms/search)
+You can find all of the implementations of **Search** at [./src/algorithms/search](./src/algorithms/search)
 
 ## Binary Search
-You can find the implementation of Binary Search at [./src/algorithms/search/binary-search/index.ts](./src/algorithms/search/binary-search/index.ts)
+You can find the implementation of **Binary Search** at [./src/algorithms/search/binary-search/index.ts](./src/algorithms/search/binary-search/index.ts)
 
-Binary Search is an efficient algorithm used to find the position of a target value within a _sorted_ array.  Search faster for great good!  It works by repeatedly dividing the search interval in half. If the *target value is less* than the middle element, you eliminate everything above the middle element.  If *target value is greater* than the middle element, you eliminate everything below the middle element. This process repeats until the target is found or the interval is empty.
+**Binary Search** is an efficient algorithm used to find the position of a target value within a _sorted_ array.  Search faster for great good!  It works by repeatedly dividing the search interval in half. If the _target value is less_ than the middle element, you eliminate everything above the middle element.  If _target value is greater_ than the middle element, you eliminate everything below the middle element. This process repeats until the target is found or the interval is empty.
 
 ### Steps
 * Start with the entire sorted array
@@ -166,7 +172,7 @@ For a sorted array `[1, 3, 5, 7, 9]` and target `7`:
 * Compare with middle element `7`, target is found, return index `3`.
 
 ### Time Complexity
-Binary search operates in `O(log n)` time complexity, making it much faster than linear search for large datasets, but it requires the data to be sorted.  `O(log n)`, where n is the number of elements, because the search space is halved with each step.
+**Binary search** operates in `O(log n)` time complexity, making it much faster than linear search for large datasets, but it requires the data to be sorted.  `O(log n)`, where n is the number of elements, because the search space is halved with each step.
 
 ### Resources
 * JavaScript implementation - [Binary Search in 100 Seconds](https://www.youtube.com/watch?v=MFhxShGxHWch)
@@ -174,24 +180,24 @@ Binary search operates in `O(log n)` time complexity, making it much faster than
 * [Leetcode 704](https://leetcode.com/problems/binary-search/description/)
 
 ## Sliding Window
-You can find all of these implementations at [./src/algorithms/sliding-window](./src/algorithms/sliding-window)
+You can find all of the implementations of **Sliding Window** at [./src/algorithms/sliding-window](./src/algorithms/sliding-window)
 
 ## Max Sub Array
-You can find the implementation of Max Sub Array at [./src/algorithms/sliding-window/max-sub-array/index.ts](./src/algorithms/sliding-window/max-sub-array/index.ts)
+You can find the implementation of **Max Sub Array** at [./src/algorithms/sliding-window/max-sub-array/index.ts](./src/algorithms/sliding-window/max-sub-array/index.ts)
 
-The Max Sub Array problem involves finding the contiguous subarray within a given array of integers that has the largest sum.
+**Max Sub Array** problem involves finding the contiguous subarray within a given array of integers that has the largest sum.
 
 ### Steps
 * Start from the first element and keep a running sum of the current sub array
-* If the running sum becomes negative, reset it to the current element (because a negative sum would reduce the overall max)
+* If the running sum becomes negative, reset it to 0 (because a negative sum would reduce the overall max)
 * Track the max sum encountered during the process
 * Continue until all elements have been processed
 
 ### Example
-For an array `[-2, 1, -3, 4, -1, 2, 1, -5, 4]`, the max sub array is `[4, -1, 2, 1]`, with a sum of `6`.
+For an array `[-2, 1, -3, 4, -1, 2, 1, -5, 4]`, the **Max Sub Array** is `[4, -1, 2, 1]`, with a sum of `6`.
 
 ### Time Complexity
-`O(n)`, where n is the number of elements, using Kadane's Algorithm, which processes each element once.  The max sub array problem is useful in scenarios that require finding the largest sum in a sequence of numbers, such as financial analyses or performance evaluations.
+`O(n)`, where `n` is the number of elements, using Kadane's Algorithm, which processes each element once.  The **Max Sub Array** problem is useful in scenarios that require finding the largest sum in a sequence of numbers, such as financial analyses or performance evaluations.
 
 ### Resources
 * Python implementation - [Maximum Subarray - Amazon Coding Interview Question - Leetcode 53 - Python](https://www.youtube.com/watch?v=5WZl3MMT0Eg)
@@ -199,12 +205,12 @@ For an array `[-2, 1, -3, 4, -1, 2, 1, -5, 4]`, the max sub array is `[4, -1, 2,
 * [Leetcode 53](https://leetcode.com/problems/maximum-subarray/description/)
 
 ## Sort
-You can find all of these implementations at [./src/algorithms/sort](./src/algorithms/sort)
+You can find all of the implementations of **Sort** at [./src/algorithms/sort](./src/algorithms/sort)
 
 ## Bubble Sort
-You can find the implementation of Bubble Sort at [./src/algorithms/sort/bubble-sort/index.ts](./src/algorithms/sort/bubble-sort/index.ts)
+You can find the implementation of **Bubble Sort** at [./src/algorithms/sort/bubble-sort/index.ts](./src/algorithms/sort/bubble-sort/index.ts)
 
-Bubble sort is a simple, comparison-based sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. This process continues until no more swaps are needed, meaning the list is sorted.  Bubble sort is not efficient for large datasets, but it’s easy to understand and implement, making it useful for educational purposes.
+**Bubble Sort** is a simple, comparison-based sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. This process continues until no more swaps are needed, meaning the list is sorted.  **Bubble Sort** is not efficient for large datasets, but it’s easy to understand and implement, making it useful for educational purposes.
 
 ### Steps
 * Starting from the beginning of the list, compare each pair of adjacent elements
@@ -221,7 +227,7 @@ For an array `[5, 3, 8, 4, 2]`:
 * Continue until the array is sorted -> `[2, 3, 4, 5, 8]`
 
 ### Time Complexity
-* Worst and Average case: `O(n²)` (when the array is in reverse order or random)
+* Worst and average case: `O(n²)` (when the array is in reverse order or random)
 * Best case: `O(n)` (when the array is already sorted)
 
 ### Resources
@@ -229,9 +235,9 @@ For an array `[5, 3, 8, 4, 2]`:
 
 
 ## Insertion Sort
-You can find the implementation of Insertion Sort at [./src/algorithms/sort/insertion-sort/index.ts](./src/algorithms/sort/insertion-sort/index.ts)
+You can find the implementation of **Insertion Sort** at [./src/algorithms/sort/insertion-sort/index.ts](./src/algorithms/sort/insertion-sort/index.ts)
 
-Insertion Sort is a simple, comparison-based sorting algorithm that builds a sorted array (or list) one element at a time by repeatedly picking an element from the unsorted portion and inserting it into its correct position in the sorted portion.
+**Insertion Sort** is a simple, comparison-based sorting algorithm that builds a sorted array (or list) one element at a time by repeatedly picking an element from the unsorted portion and inserting it into its correct position in the sorted portion.
 
 ### Steps
 * Start from the second element (assuming the first is already sorted)
@@ -249,19 +255,19 @@ For an array `[5, 3, 8, 4, 2]`:
 
 ### Time Complexity
 * Best case: `O(n)` (when the array is already sorted)
-* Worst and Average case: `O(n²)` (when the array is in reverse order or random)
+* Worst and average case: `O(n²)` (when the array is in reverse order or random)
 
 ### Use Cases
-Insertion sort is efficient for small datasets or arrays that are already mostly sorted. It's easy to implement and understand but not suitable for large datasets due to its quadratic time complexity.
+**Insertion Sort** is efficient for small datasets or arrays that are already mostly sorted. It's easy to implement and understand but not suitable for large datasets due to its quadratic time complexity.
 
 ### Resources
 * Java Implementation - [Learn Insertion Sort in 7 minutes](https://www.youtube.com/watch?v=8mJ-OhcfpYg)
 
 
 ## Merge Sort
-You can find the implementation of Merge Sort at [./src/algorithms/sort/merge-sort/index.ts](./src/algorithms/sort/merge-sort/index.ts)
+You can find the implementation of **Merge Sort** at [./src/algorithms/sort/merge-sort/index.ts](./src/algorithms/sort/merge-sort/index.ts)
 
-Merge Sort is a comparison-based sorting algorithm that follows the divide-and-conquer approach. It divides the array into smaller subarrays, sorts them individually, and then merges them back together in sorted order.
+**Merge Sort** is a comparison-based sorting algorithm that follows the divide-and-conquer approach. It divides the array into smaller subarrays, sorts them individually, and then merges them back together in sorted order.
 
 ### Steps
 * Divide the array into two halves until each subarray has only one element
@@ -280,16 +286,16 @@ For an array `[3, 1, 4, 1, 5, 9, 2, 6]`:
 * `O(n log n)` in all cases (best, worst, and average), making it highly efficient for large datasets
 
 ### Use Cases
-Merge Sort is stable and guarantees optimal performance, making it ideal for sorting linked lists or for scenarios where guaranteed `O(n log n)` performance is required. However, it requires additional memory for the merging process.
+**Merge Sort** is stable and guarantees optimal performance, making it ideal for sorting linked lists or for scenarios where guaranteed `O(n log n)` performance is required. However, it requires additional memory for the merging process.
 
 ## Resources
 * Java Implementation - [Learn Merge Sort in 13 Minutes](https://www.youtube.com/watch?v=3j0SWDX4AtU)
 
 
 ## Quick Sort
-You can find the implementation of Quick Sort at [./src/algorithms/sort/quick-sort/index.ts](./src/algorithms/sort/quick-sort/index.ts)
+You can find the implementation of **Quick Sort** at [./src/algorithms/sort/quick-sort/index.ts](./src/algorithms/sort/quick-sort/index.ts)
 
-Quick Sort is a highly efficient, comparison-based sorting algorithm that uses the divide-and-conquer approach to sort elements. It works by selecting a "pivot" element and partitioning the array so that all elements smaller than the pivot come before it, and all elements larger come after it.
+**Quick Sort** is a highly efficient, comparison-based sorting algorithm that uses the divide-and-conquer approach to sort elements. It works by selecting a "pivot" element and partitioning the array so that all elements smaller than the pivot come before it, and all elements larger come after it.
 
 ### Steps
 * Choose a pivot element from the array (the implementation chooses the last index
@@ -306,10 +312,10 @@ For an array `[3, 6, 8, 10, 1, 2, 1]`:
 
 ### Time Complexity
 * Average case: `O(n log n)`
-* Worst case: `O(n²)` (when the pivot is poorly chosen, like the smallest or largest element).
+* Worst case: `O(n²)` (when the pivot is poorly chosen, like the smallest or largest element)
 
 ### Use Cases
-Quick Sort is known for its fast performance and is widely used in practice, particularly for large datasets, because of its average-case efficiency and in-place sorting.
+**Quick Sort** is known for its fast performance and is widely used in practice, particularly for large datasets, because of its average-case efficiency and in-place sorting.
 
 ### Resources
 * Java Implementation - [Learn Quick Sort in 13 Minutes](https://www.youtube.com/watch?v=Vtckgz38QHs)
@@ -333,14 +339,14 @@ You can find all of these implementations at [./src/data-structures](./src/data-
  
 
 ## List
-You can find all of these implementations at [./src/data-structures/list](./src/data-structures/list)
+You can find all of the implementations of **List** at [./src/data-structures/list](./src/data-structures/list)
 
 ## Queue
-You can find the implementation of a Queue at [./src/data-structures/list/queue/index.ts](./src/data-structures/list/queue/index.ts)
+You can find the implementation of a **Queue** at [./src/data-structures/list/queue/index.ts](./src/data-structures/list/queue/index.ts)
 
-A queue is a linear data structure that follows the First In, First Out (FIFO) principle, meaning the first element added to the queue will be the first one to be removed. It is similar to a real-life queue, like waiting in line—those who arrive first get served first.
+A **Queue** is a linear data structure that follows the _First In, First Out (FIFO)_ principle, meaning the first element added to the queue will be the first one to be removed. It is similar to a real-life queue, like waiting in line—those who arrive first get served first.
 
-### Key Operations
+### Implemented Methods
 * **dequeue**
   * Remove an element from the front of the queue (think shift in arrays)
 * **enqueue(value)**
@@ -362,9 +368,9 @@ A queue is a linear data structure that follows the First In, First Out (FIFO) p
 * [Stacks & Queues - DSA Course in Python Lecture 5](https://www.youtube.com/watch?v=vOx3vY1w4tM)
 
 ## Stack
-You can find the implementation of a Stack at [./src/data-structures/stack/index.ts](./src/data-structures/list/stack/index.ts)
+You can find the implementation of a **Stack** at [./src/data-structures/stack/index.ts](./src/data-structures/list/stack/index.ts)
 
-A stack is a linear data structure that follows the Last In, First Out (LIFO) principle, meaning the last element added to the stack will be the first one removed. It is similar to a stack of plates, where the plate placed on top is the first to be taken off.
+A **Stack** is a linear data structure that follows the _Last In, First Out (LIFO)_ principle, meaning the last element added to the stack will be the first one removed. It is similar to a stack of plates, where the plate placed on top is the first to be taken off.
 
 ### Implemented Methods 
 * **isEmpty**
@@ -386,9 +392,9 @@ A stack is a linear data structure that follows the Last In, First Out (LIFO) pr
 * [Stacks & Queues - DSA Course in Python Lecture 5](https://www.youtube.com/watch?v=vOx3vY1w4tM)
 
 ## Singly Linked List
-You can find the implementation of a Singly Linked List at [./src/data-structures/singly-linked-list/index.ts](./src/data-structures/list/singly-linked-list/index.ts)
+You can find the implementation of a **Singly Linked List** at [./src/data-structures/singly-linked-list/index.ts](./src/data-structures/list/singly-linked-list/index.ts)
 
-A Singly Linked List is a linear data structure made up of nodes, where each node contains two elements:
+A **Singly Linked List** is a linear data structure made up of nodes, where each node contains two elements:
 * **data**: The value or content of the node
 * **next**: A link to the next node in the sequence
 
@@ -422,9 +428,9 @@ Unlike arrays, linked lists do not store elements in contiguous memory locations
 You can find all of these implementations at [./src/data-structures/tree](./src/data-structures/tree)
 
 ## Binary Search Tree
-You can find the implementation of a Binary Search Tree at [./src/data-structures/tree/binary-search-tree/index.ts](./src/data-structures/tree/binary-search-tree/index.ts)
+You can find the implementation of a **Binary Search Tree** at [./src/data-structures/tree/binary-search-tree/index.ts](./src/data-structures/tree/binary-search-tree/index.ts)
 
-A Binary Search Tree (BST) is a node-based data structure where each node has at most two children, referred to as the left and right child. It is designed to efficiently store and retrieve data in sorted order:
+A **Binary Search Tree** is a node-based data structure where each node has at most two children, referred to as the left and right child. It is designed to efficiently store and retrieve data in sorted order:
 
 * **left**: Contains nodes with values less than the node’s value (also a binary search tree)
 * **right**: Contains nodes with values greater than the node’s value (also a binary search tree)
@@ -444,7 +450,7 @@ The root is `5`, with `3` and `7` as its children:
 * Worst case: `O(n)`, if the tree becomes unbalanced (e.g., a sorted input)
 
 ### Use Cases
-Binary Search Trees are commonly used in search-related algorithms and data structures due to their ability to quickly retrieve, insert, and delete elements while maintaining order.
+**Binary Search Trees** are commonly used in search-related algorithms and data structures due to their ability to quickly retrieve, insert, and delete elements while maintaining order.
 
 ### Resources
 * [Binary Trees & Binary Search Trees - DSA Course in Python Lecture 8](https://www.youtube.com/watch?v=EPwWrs8OtfI)
