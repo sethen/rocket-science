@@ -1,13 +1,23 @@
 import { ITreeNode, TreeNode } from '../tree-node';
 
 export class BinarySearchTree<T> {
-  public root: ITreeNode<T> | undefined;
+  private root: ITreeNode<T> | undefined;
+  private traversal: Array<T> | undefined;
 
   constructor(value?: T) {
     this.root = value ? new TreeNode<T>(value) : undefined;
+    this.traversal = undefined;
   }
 
-  insert(value: T) {
+  public getRoot() {
+    return this.root;
+  }
+
+  public getTraversal() {
+    return this.traversal;
+  }
+
+  public insert(value: T) {
     // create new node regardless
     var newNode = new TreeNode(value);
 
@@ -59,5 +69,25 @@ export class BinarySearchTree<T> {
         }
       }
     }
+  }
+
+  public preorderTraversalDFS(node: TreeNode<T> | undefined) {
+    if (!this.root || !node) {
+      return;
+    }
+
+    if (!this.traversal) {
+      this.traversal = [];
+    }
+
+    const {
+      left,
+      right,
+      value
+    } = node;
+
+    this.traversal.push(value);
+    this.preorderTraversalDFS(left);
+    this.preorderTraversalDFS(right);
   }
 }

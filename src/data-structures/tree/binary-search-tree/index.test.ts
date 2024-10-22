@@ -19,11 +19,10 @@ describe('BinarySearchTree', () => {
       binaryTree.insert(4);
       binaryTree.insert(1);
 
-      expect(binaryTree.root?.value).toBe(10)
-      expect(binaryTree.root?.left?.value).toBe(4)
-      expect(binaryTree.root?.right?.value).toBe(11)
-      expect(binaryTree.root?.left?.left?.value).toBe(1)
+      expect(binaryTree.getRoot()?.value).toBe(10)
+      expect(binaryTree.getRoot()?.left?.value).toBe(4)
+      expect(binaryTree.getRoot()?.right?.value).toBe(11)
+      expect(binaryTree.getRoot()?.left?.left?.value).toBe(1)
     })
   })
 })
-

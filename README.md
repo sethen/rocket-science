@@ -24,6 +24,8 @@ This is a repository full of implementations for common algorithms and data stru
     * [Quick Sort](#quick-sort)
   * [Sum](#sum)
     * [Two Sum](#two-sum)
+  * [Traversal DFS](#traversal-dfs)
+    * [Preorder](#preorder)
 * [Data Structures](#data-structures)
   * [List](#list)
     * [Queue](#queue)
@@ -69,8 +71,50 @@ This repository is simple and doesn't require much in the way of usage.  You nee
 # Algorithms
 You can find all of these implementations at [./src/algorithms](./src/algorithms)
 
+
+## Traversal DFS 
+You can find all of these implementations at [./src/algorithms/traversal/dfs](./src/algorithms/traversal/dfs)
+
+Depth-First Search (DFS) is a graph or tree traversal algorithm that explores as far down a branch as possible before backtracking. It starts at a source node and explores each branch of the graph or tree by visiting child nodes recursively or using a stack for the iterative version.
+
+## Preorder 
+You can find the implementation of Traversal Depth First Search Preorder at [./src/algorithms/traversal/dfs/preorder](./src/algorithms/traversal/dfs/preorder/index.ts)
+
+Pre-order Depth-First Search (DFS) is a tree traversal technique where you visit nodes in a specific order: first the current node, then its left subtree, followed by its right subtree. This traversal explores the entire left branch before moving to the right branch -- `node` -> `left` -> `right`.
+
+### Steps
+For the binary tree:
+
+```
+    1
+   / \
+  2   3
+ / \
+4   5
+```
+
+The pre-order traversal would be:
+
+* Start at the root `1`.
+* Traverse the left subtree:
+  * Visit `2`, then its left child `4` and right child `5`
+* Traverse the right subtree:
+  * Visit `3`
+
+Result would be `[1, 2, 4, 5, 3]`.
+
+### Time Complexity:
+`O(n)`, where `n` is the number of nodes, because each node is visited exactly once.
+
+### Use Cases:
+Pre-order traversal is useful in scenarios where you need to explore nodes before their children, such as copying a tree, expression tree evaluation, or when you need to preserve node hierarchy in your traversal.
+
+### Resources
+* [Binary Trees & Binary Search Trees - DSA Course in Python Lecture 8](https://www.youtube.com/watch?v=EPwWrs8OtfI)
+
+
 ## Sum
-You can find all of these implementations at [./src/algorithms/misc](./src/algorithms/sum)
+You can find all of these implementations at [./src/algorithms/sum](./src/algorithms/sum)
 
 ## Two Sum 
 You can find the implementation of Two Sum at [./src/algorithms/sum/two-sum/index.ts](./src/algorithms/sum/two-sum/index.ts)
