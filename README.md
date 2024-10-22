@@ -26,6 +26,7 @@ This is a repository full of implementations for common algorithms and data stru
     * [Two Sum](#two-sum)
   * [Traversal](#traversal)
     * [DFS](#dfs)
+      * [Inorder](#inorder)
       * [Preorder](#preorder)
 * [Data Structures](#data-structures)
   * [List](#list)
@@ -86,7 +87,7 @@ You can find all of the implementations **DFS** at [./src/algorithms/traversal/d
 ## Preorder 
 You can find the implementation of **Preorder** at [./src/algorithms/traversal/dfs/preorder](./src/algorithms/traversal/dfs/preorder/index.ts)
 
-**Preorder**  is a DFS tree traversal technique where you visit nodes in a specific order: first the current node, then its left subtree, followed by its right subtree (`node` -> `left` -> `right`). This traversal explores the entire left branch before moving to the right branch.
+**Preorder** is a DFS tree traversal technique where you visit nodes in a specific order: first the current node, then its left subtree, followed by its right subtree (`node` -> `left` -> `right`). This traversal explores the entire left branch before moving to the right branch.
 
 ### Steps
 For the binary tree:
@@ -120,6 +121,43 @@ Pre-order traversal is useful in scenarios where you need to explore nodes befor
 
 ### Visuals
 ![Traversal DFS Preorder](./src/algorithms/traversal/dfs/preorder/images/traversal-dfs-preorder.png)
+
+
+## Inorder 
+You can find the implementation of **Inorder** at [./src/algorithms/traversal/dfs/inorder](./src/algorithms/traversal/dfs/inorder/index.ts)
+
+**Inorder** DFS is a tree traversal technique where nodes are visited in a specific order: first the left subtree, then the current node, followed by the right subtree -- `left` -> `node` -> `right`. This traversal is commonly used with binary search trees (BSTs) to retrieve nodes in ascending order.
+
+### Steps
+* Recursively traverse the left subtree
+* Visit the current node.
+* Recursively traverse the right subtree
+
+### Example:
+For a binary tree:
+
+```
+    1
+   / \
+  2   3
+ / \
+4   5
+```
+
+The in-order traversal visits the nodes in this order: `4, 2, 5, 1, 3`
+
+### Time Complexity:
+`O(n)`, where `n` is the number of nodes, because each node is visited exactly once.
+
+### Use Cases
+**Inorder** traversal is commonly used in binary search trees (BSTs) to retrieve data in sorted order.
+
+### Resources
+* [Binary Trees & Binary Search Trees - DSA Course in Python Lecture 8](https://www.youtube.com/watch?v=EPwWrs8OtfI)
+
+### Visuals
+![Traversal DFS Inorder](./src/algorithms/traversal/dfs/inorder/images/traversal-dfs-inorder.png)
+
 
 ## Sum
 You can find all of the implementations of **Sum** at [./src/algorithms/sum](./src/algorithms/sum)

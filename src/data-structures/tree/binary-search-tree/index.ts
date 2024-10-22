@@ -21,73 +21,27 @@ export class BinarySearchTree<T> {
     // create new node regardless
     var newNode = new TreeNode(value);
 
-    // if there is no root in the tree
-    if (this.root === undefined){
-      // set the root
+    if (!this.root) {
       this.root = newNode;
-
-      return;
     }
     else {
-      // cursor for current root
-      var current = this.root;
-
-      // start loop
-      while (true) {
-        // if value is equal to the curren value
-        // ignore it -- no duplicates!
-        if (value === current.value) {
-          return;
-        }
-
-        // if the value we're inserting
-        // is less than the current value
-        if (value < current.value) {
-          // and the left node is undefined
-          if (current.left === undefined){
-            // the tree node goes on the left
-            current.left = newNode;
-
-            return;
-          }
-
-          // update current to the left node
-          // to keep walking down the tree
-          current = current.left;
-        } else {
-          // if the current right node is undefined
-          if (current.right === undefined){
-            // the tree node goes on the right
-            current.right = newNode;
-
-            return;
-          } 
-
-          // update current to the right node
-          // to keep walking down the tree
-          current = current.right;
-        }
-      }
+      this.insertNode<T>(this.root, newNode);
     }
   }
 
-  public preorderTraversalDFS(node: TreeNode<T> | undefined) {
-    if (!this.root || !node) {
-      return;
+  private insertNode<T>(node: TreeNode<T>, newNode: TreeNode<T>) {
+    if (newNode.value < node.value) {
+      if (node.left === undefined) {
+        node.left = newNode;
+      } else {
+        this.insertNode(node.left, newNode);
+      }
+    } else {
+      if (node.right === undefined) {
+        node.right = newNode;
+      } else {
+        this.insertNode(node.right, newNode);
+      }
     }
-
-    if (!this.traversal) {
-      this.traversal = [];
-    }
-
-    const {
-      left,
-      right,
-      value
-    } = node;
-
-    this.traversal.push(value);
-    this.preorderTraversalDFS(left);
-    this.preorderTraversalDFS(right);
   }
 }

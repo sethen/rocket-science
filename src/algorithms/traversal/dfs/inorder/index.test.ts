@@ -1,6 +1,6 @@
 import { describe, expect } from '@jest/globals';
 import { BinarySearchTree } from '../../../../data-structures/tree/binary-search-tree/';
-import { traversalDFSPreorder } from './';
+import { traversalDFSInorder } from './';
 
 describe('traversal', () => {
   describe('dfs', () => {
@@ -10,12 +10,12 @@ describe('traversal', () => {
       traversal = [];
     });
 
-    describe('traversalDFSPreorder', () => {
-      it('should be able to do a traversal dfs preorder', () => {
+    describe('traversalDFSInorder', () => {
+      it('should be able to do a traversal dfs inorder', () => {
         /****************
             200 
            /   \
-         150   210
+         150    210
          /\     / \
        130 160 205 220 
       *****************/
@@ -32,9 +32,9 @@ describe('traversal', () => {
 
         const root = binaryTree.getRoot();
 
-        traversalDFSPreorder(root, (value: number) => traversal.push(value));
+        traversalDFSInorder(root, (value: number) => traversal.push(value));
 
-        expect(traversal).toEqual([ 200, 150, 130, 160, 210, 205, 220 ]);
+        expect(traversal).toEqual([ 130, 150, 160, 200, 205, 210, 220 ]);
       })
     })
   })
