@@ -408,3 +408,4 @@ Binary Search Trees are commonly used in search-related algorithms and data stru
 ### Visuals
 ![Complete Binary Tree](./src/data-structures/tree/binary-search-tree/images/complete-binary-tree.png)
 ![Perfect Binary Tree](./src/data-structures/tree/binary-search-tree/images/perfect-binary-tree.png)
+![Binary Search Tree](./src/data-structures/tree/binary-search-tree/images/binary-search-tree.png)
