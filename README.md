@@ -314,6 +314,8 @@ A queue is a linear data structure that follows the First In, First Out (FIFO) p
 * Message Queuing systems in distributed applications
 * Queues are typically implemented using arrays or linked lists and are fundamental in managing tasks that need to be processed in order
 
+### Resources
+* [Stacks & Queues - DSA Course in Python Lecture 5](https://www.youtube.com/watch?v=vOx3vY1w4tM&list=PLKYEe2WisBTFEr6laH5bR2J19j7sl5O8R&index=6)
 
 ## Stack
 You can find the implementation of a Stack at [./src/data-structures/stack/index.ts](./src/data-structures/list/stack/index.ts)
@@ -336,6 +338,8 @@ A stack is a linear data structure that follows the Last In, First Out (LIFO) pr
 * Backtracking algorithms like Depth-First Search (DFS)
 * Stacks can be implemented using arrays or linked lists and are crucial for scenarios where you need to manage data in reverse order
 
+### Resources
+* [Stacks & Queues - DSA Course in Python Lecture 5](https://www.youtube.com/watch?v=vOx3vY1w4tM&list=PLKYEe2WisBTFEr6laH5bR2J19j7sl5O8R&index=6)
 
 ## Singly Linked List
 You can find the implementation of a Singly Linked List at [./src/data-structures/singly-linked-list/index.ts](./src/data-structures/list/singly-linked-list/index.ts)
@@ -362,9 +366,12 @@ Unlike arrays, linked lists do not store elements in contiguous memory locations
 * **unshift(value)**
   * Add element to the beginning of the list
 
-### Use Cases:
+### Use Cases
 * Efficient insertions and deletions at any position
 * Dynamic memory allocation where size can grow or shrink as needed
+
+### Resources
+* [Linked Lists - Singly & Doubly Linked - DSA Course in Python Lecture 3](https://www.youtube.com/watch?v=dqLHTK7RuIo&list=PLKYEe2WisBTFEr6laH5bR2J19j7sl5O8R&index=5)
 
 
 # Tree
