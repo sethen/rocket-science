@@ -118,6 +118,8 @@ Pre-order traversal is useful in scenarios where you need to explore nodes befor
 ### Resources
 * [Binary Trees & Binary Search Trees - DSA Course in Python Lecture 8](https://www.youtube.com/watch?v=EPwWrs8OtfI)
 
+### Visuals
+![Traversal DFS Preorder](./src/algorithms/traversal/dfs/preorder/images/traversal-dfs-preorder.png)
 
 ## Sum
 You can find all of the implementations of **Sum** at [./src/algorithms/sum](./src/algorithms/sum)
