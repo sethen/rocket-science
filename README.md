@@ -103,10 +103,10 @@ The pre-order traversal would be:
 
 Result would be `[1, 2, 4, 5, 3]`.
 
-### Time Complexity:
+### Time Complexity
 `O(n)`, where `n` is the number of nodes, because each node is visited exactly once.
 
-### Use Cases:
+### Use Cases
 Pre-order traversal is useful in scenarios where you need to explore nodes before their children, such as copying a tree, expression tree evaluation, or when you need to preserve node hierarchy in your traversal.
 
 ### Resources
@@ -127,7 +127,7 @@ Two Sum problem involves finding two numbers in an array that add up to a given 
 * For each number, check if its complement already exists in the hash map
 * If found, return the indices of the complement and the current number
 
-### Example:
+### Example
 For an array `[2, 7, 11, 15]` and target `9`:
 
 * Complement of `2` is `7`, store `2` in the map
@@ -181,16 +181,16 @@ You can find the implementation of Max Sub Array at [./src/algorithms/sliding-wi
 
 The Max Sub Array problem involves finding the contiguous subarray within a given array of integers that has the largest sum.
 
-### Steps:
+### Steps
 * Start from the first element and keep a running sum of the current sub array
 * If the running sum becomes negative, reset it to the current element (because a negative sum would reduce the overall max)
 * Track the max sum encountered during the process
 * Continue until all elements have been processed
 
-### Example:
+### Example
 For an array `[-2, 1, -3, 4, -1, 2, 1, -5, 4]`, the max sub array is `[4, -1, 2, 1]`, with a sum of `6`.
 
-### Time Complexity:
+### Time Complexity
 `O(n)`, where n is the number of elements, using Kadane's Algorithm, which processes each element once.  The max sub array problem is useful in scenarios that require finding the largest sum in a sequence of numbers, such as financial analyses or performance evaluations.
 
 ### Resources
@@ -206,13 +206,13 @@ You can find the implementation of Bubble Sort at [./src/algorithms/sort/bubble-
 
 Bubble sort is a simple, comparison-based sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. This process continues until no more swaps are needed, meaning the list is sorted.  Bubble sort is not efficient for large datasets, but it’s easy to understand and implement, making it useful for educational purposes.
 
-### Steps:
+### Steps
 * Starting from the beginning of the list, compare each pair of adjacent elements
 * If the current element is greater than the next, swap them
 * Continue this process for all elements. After each pass, the largest element "bubbles" to its correct position
 * Repeat until the entire list is sorted
 
-### Example:
+### Example
 For an array `[5, 3, 8, 4, 2]`:
 
 * Compare 5 and 3, swap -> `[3, 5, 8, 4, 2]`
@@ -220,7 +220,7 @@ For an array `[5, 3, 8, 4, 2]`:
 * Compare 8 and 4, swap -> `[3, 5, 4, 8, 2]`
 * Continue until the array is sorted -> `[2, 3, 4, 5, 8]`
 
-### Time Complexity:
+### Time Complexity
 * Worst and Average case: `O(n²)` (when the array is in reverse order or random)
 * Best case: `O(n)` (when the array is already sorted)
 
@@ -233,25 +233,25 @@ You can find the implementation of Insertion Sort at [./src/algorithms/sort/inse
 
 Insertion Sort is a simple, comparison-based sorting algorithm that builds a sorted array (or list) one element at a time by repeatedly picking an element from the unsorted portion and inserting it into its correct position in the sorted portion.
 
-### Steps:
+### Steps
 * Start from the second element (assuming the first is already sorted)
 * Compare the current element with the elements in the sorted portion
 * Shift elements in the sorted portion to the right to create space
 * Insert the current element into its correct position.
 * Repeat until all elements are sorted
 
-### Example:
+### Example
 For an array `[5, 3, 8, 4, 2]`:
 
 * First, `3` is inserted before `5`, resulting in `[3, 5, 8, 4, 2]`
 * Then `8` stays in place, and `4` is inserted between `3` and `5`
 * Finally, `2` is inserted at the start, giving `[2, 3, 4, 5, 8]`
 
-### Time Complexity:
+### Time Complexity
 * Best case: `O(n)` (when the array is already sorted)
 * Worst and Average case: `O(n²)` (when the array is in reverse order or random)
 
-### Use Cases:
+### Use Cases
 Insertion sort is efficient for small datasets or arrays that are already mostly sorted. It's easy to implement and understand but not suitable for large datasets due to its quadratic time complexity.
 
 ### Resources
@@ -263,20 +263,20 @@ You can find the implementation of Merge Sort at [./src/algorithms/sort/merge-so
 
 Merge Sort is a comparison-based sorting algorithm that follows the divide-and-conquer approach. It divides the array into smaller subarrays, sorts them individually, and then merges them back together in sorted order.
 
-### Steps:
+### Steps
 * Divide the array into two halves until each subarray has only one element
 * Recursively sort each half
 * Merge the two sorted halves by comparing elements and arranging them in the correct order
 * Repeat the merging process until all subarrays are combined into a fully sorted array.
 
-### Example:
+### Example
 For an array `[3, 1, 4, 1, 5, 9, 2, 6]`:
 
 * Divide into `[3, 1, 4, 1]` and `[5, 9, 2, 6]`
 * Recursively divide and sort each half.
 * Merge sorted subarrays to get the fully sorted array [1, 1, 2, 3, 4, 5, 6, 9].
 
-### Time Complexity:
+### Time Complexity
 * `O(n log n)` in all cases (best, worst, and average), making it highly efficient for large datasets
 
 ### Use Cases
@@ -291,20 +291,20 @@ You can find the implementation of Quick Sort at [./src/algorithms/sort/quick-so
 
 Quick Sort is a highly efficient, comparison-based sorting algorithm that uses the divide-and-conquer approach to sort elements. It works by selecting a "pivot" element and partitioning the array so that all elements smaller than the pivot come before it, and all elements larger come after it.
 
-### Steps:
+### Steps
 * Choose a pivot element from the array (the implementation chooses the last index
 * Partition the array by rearranging elements: elements less than the pivot go to its left, and elements greater go to its right
 * Recursively apply the same process to the left and right subarrays
 * Continue this until each subarray has only one element or is empty, at which point the array is sorted
 
-### Example:
+### Example
 For an array `[3, 6, 8, 10, 1, 2, 1]`:
 
 * Choose 3 as the pivot
 * Partition to get `[1, 2, 1]` (less than 3) and `[6, 8, 10]` (greater than `3`)
 * Recursively sort the subarrays
 
-### Time Complexity:
+### Time Complexity
 * Average case: `O(n log n)`
 * Worst case: `O(n²)` (when the pivot is poorly chosen, like the smallest or largest element).
 
