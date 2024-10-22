@@ -2,7 +2,7 @@
 // think of it as a line
 // whatever comes in first goes out first
 export class Queue<T> {
-  public queue: Array<T> = [];
+  private queue: Array<T> = [];
 
   // remove an item from the beginning 
   public dequeue(): T | undefined {
