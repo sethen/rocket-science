@@ -27,6 +27,7 @@ This is a repository full of implementations for common algorithms and data stru
   * [Traversal](#traversal)
     * [DFS](#dfs)
       * [Inorder](#inorder)
+      * [Postorder](#postorder)
       * [Preorder](#preorder)
 * [Data Structures](#data-structures)
   * [List](#list)
@@ -84,6 +85,81 @@ You can find all of the implementations **DFS** at [./src/algorithms/traversal/d
 
 **Depth-First Search or DFS** is a graph or tree traversal algorithm that explores as far down a branch as possible before backtracking. It starts at a source node and explores each branch of the graph or tree by visiting child nodes recursively or using a stack for the iterative version.
 
+
+## Inorder 
+You can find the implementation of **Inorder** at [./src/algorithms/traversal/dfs/inorder](./src/algorithms/traversal/dfs/inorder/index.ts)
+
+**Inorder** DFS is a tree traversal technique where nodes are visited in a specific order: first the left subtree, then the current node, followed by the right subtree -- `left` -> `node` -> `right`. This traversal is commonly used with binary search trees (BSTs) to retrieve nodes in ascending order.
+
+### Steps
+* Recursively traverse the left subtree
+* Visit the current node.
+* Recursively traverse the right subtree
+
+### Example:
+For a binary tree:
+
+```
+    1
+   / \
+  2   3
+ / \
+4   5
+```
+
+The **Inorder** traversal visits the nodes in this order: `4, 2, 5, 1, 3`
+
+### Time Complexity:
+`O(n)`, where `n` is the number of nodes, because each node is visited exactly once.
+
+### Use Cases
+**Inorder** traversal is commonly used in binary search trees (BSTs) to retrieve data in sorted order.
+
+### Resources
+* [Binary Trees & Binary Search Trees - DSA Course in Python Lecture 8](https://www.youtube.com/watch?v=EPwWrs8OtfI)
+* [In-order tree traversal in 3 minutes](https://www.youtube.com/watch?v=5dySuyZf9Qg)
+
+### Visuals
+![Traversal DFS Inorder](./src/algorithms/traversal/dfs/inorder/images/traversal-dfs-inorder.png)
+
+
+## Postorder 
+You can find the implementation of **Postorder** at [./src/algorithms/traversal/dfs/postorder](./src/algorithms/traversal/dfs/postorder/index.ts)
+
+**Postorder** DFS is a tree traversal method where you visit the nodes in a specific order: first the left subtree, then the right subtree, and finally the current node -- `left` -> `right` -> `node`. This method ensures that child nodes are processed before their parent nodes.
+
+### Steps
+* Recursively traverse the left subtree
+* Recursively traverse the right subtree
+* Visit the current node
+
+### Example:
+For a binary tree:
+
+```
+    1
+   / \
+  2   3
+ / \
+4   5
+````
+
+The **Postorder** traversal visits the nodes in this order: `4, 5, 2, 3, 1`.
+
+### Time Complexity:
+`O(n)`, where `n` is the number of nodes, because each node is visited exactly once.
+
+### Use Cases
+**Postorder** traversal is useful for operations like deleting a tree, evaluating expression trees, or processing child nodes before their parent (e.g., calculating node dependencies).
+
+### Resources
+* [Binary Trees & Binary Search Trees - DSA Course in Python Lecture 8](https://www.youtube.com/watch?v=EPwWrs8OtfI)
+* [Post-order tree traversal in 2 minutes](https://www.youtube.com/watch?v=4zVdfkpcT6U)
+
+### Visuals
+![Traversal DFS Postorder](./src/algorithms/traversal/dfs/postorder/images/traversal-dfs-postorder.png)
+
+
 ## Preorder 
 You can find the implementation of **Preorder** at [./src/algorithms/traversal/dfs/preorder](./src/algorithms/traversal/dfs/preorder/index.ts)
 
@@ -114,49 +190,14 @@ Result would be `[1, 2, 4, 5, 3]`.
 `O(n)`, where `n` is the number of nodes, because each node is visited exactly once.
 
 ### Use Cases
-Pre-order traversal is useful in scenarios where you need to explore nodes before their children, such as copying a tree, expression tree evaluation, or when you need to preserve node hierarchy in your traversal.
+**Preorder** traversal is useful in scenarios where you need to explore nodes before their children, such as copying a tree, expression tree evaluation, or when you need to preserve node hierarchy in your traversal.
 
 ### Resources
 * [Binary Trees & Binary Search Trees - DSA Course in Python Lecture 8](https://www.youtube.com/watch?v=EPwWrs8OtfI)
+* [Pre-order tree traversal in 3 minutes](https://www.youtube.com/watch?v=1WxLM2hwL-U)
 
 ### Visuals
 ![Traversal DFS Preorder](./src/algorithms/traversal/dfs/preorder/images/traversal-dfs-preorder.png)
-
-
-## Inorder 
-You can find the implementation of **Inorder** at [./src/algorithms/traversal/dfs/inorder](./src/algorithms/traversal/dfs/inorder/index.ts)
-
-**Inorder** DFS is a tree traversal technique where nodes are visited in a specific order: first the left subtree, then the current node, followed by the right subtree -- `left` -> `node` -> `right`. This traversal is commonly used with binary search trees (BSTs) to retrieve nodes in ascending order.
-
-### Steps
-* Recursively traverse the left subtree
-* Visit the current node.
-* Recursively traverse the right subtree
-
-### Example:
-For a binary tree:
-
-```
-    1
-   / \
-  2   3
- / \
-4   5
-```
-
-The in-order traversal visits the nodes in this order: `4, 2, 5, 1, 3`
-
-### Time Complexity:
-`O(n)`, where `n` is the number of nodes, because each node is visited exactly once.
-
-### Use Cases
-**Inorder** traversal is commonly used in binary search trees (BSTs) to retrieve data in sorted order.
-
-### Resources
-* [Binary Trees & Binary Search Trees - DSA Course in Python Lecture 8](https://www.youtube.com/watch?v=EPwWrs8OtfI)
-
-### Visuals
-![Traversal DFS Inorder](./src/algorithms/traversal/dfs/inorder/images/traversal-dfs-inorder.png)
 
 
 ## Sum
@@ -320,7 +361,7 @@ For an array `[3, 1, 4, 1, 5, 9, 2, 6]`:
 
 * Divide into `[3, 1, 4, 1]` and `[5, 9, 2, 6]`
 * Recursively divide and sort each half.
-* Merge sorted subarrays to get the fully sorted array [1, 1, 2, 3, 4, 5, 6, 9].
+* Merge sorted subarrays to get the fully sorted array `[1, 1, 2, 3, 4, 5, 6, 9]`.
 
 ### Time Complexity
 * `O(n log n)` in all cases (best, worst, and average), making it highly efficient for large datasets
