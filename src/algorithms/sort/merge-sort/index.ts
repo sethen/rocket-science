@@ -1,3 +1,6 @@
+// Merge Sort
+// Time: O(n log n)
+// Space: (n) 
 export function mergeSort(arrOfValues: Array<number>): Array<number> {
   // get the length of the array
   const arrOfValuesLength = arrOfValues.length;

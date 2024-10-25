@@ -1,3 +1,6 @@
+// Quick Sort
+// Time: O(n log n)
+// Space: O(n)
 export function quickSort(arrOfValues: number[]): number[] {
   // if the array is less than or equal to 1
   // it is already sorted

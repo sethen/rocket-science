@@ -19,9 +19,11 @@ This is a repository full of implementations for common algorithms and data stru
     * [Max Sub Array](#max-sub-array)
   * [Sort](#sort)
     * [Bubble Sort](#bubble-sort)
+    * [Counting Sort](#counting-sort)
     * [Insertion Sort](#insertion-sort)
     * [Merge Sort](#merge-sort)
     * [Quick Sort](#quick-sort)
+    * [Selection Sort](#selection-sort)
   * [Traversal](#traversal)
     * [DFS](#dfs)
       * [Inorder](#inorder)
@@ -96,7 +98,7 @@ You can find the implementation of **Inorder** at [./src/algorithms/traversal/df
 * Visit the current node.
 * Recursively traverse the right subtree
 
-### Example:
+### Example
 For a binary tree:
 
 ```
@@ -109,7 +111,7 @@ For a binary tree:
 
 The **Inorder** traversal visits the nodes in this order: `4, 2, 5, 1, 3`
 
-### Time Complexity:
+### Time Complexity
 `O(n)`, where `n` is the number of nodes, because each node is visited exactly once.
 
 ### Use Cases
@@ -133,7 +135,7 @@ You can find the implementation of **Postorder** at [./src/algorithms/traversal/
 * Recursively traverse the right subtree
 * Visit the current node
 
-### Example:
+### Example
 For a binary tree:
 
 ```
@@ -146,7 +148,7 @@ For a binary tree:
 
 The **Postorder** traversal visits the nodes in this order: `4, 5, 2, 3, 1`.
 
-### Time Complexity:
+### Time Complexity
 `O(n)`, where `n` is the number of nodes, because each node is visited exactly once.
 
 ### Use Cases
@@ -278,18 +280,44 @@ You can find the implementation of **Bubble Sort** at [./src/algorithms/sort/bub
 ### Example
 For an array `[5, 3, 8, 4, 2]`:
 
-* Compare 5 and 3, swap -> `[3, 5, 8, 4, 2]`
-* Compare 5 and 8, no swap
-* Compare 8 and 4, swap -> `[3, 5, 4, 8, 2]`
+* Compare `5` and `3`, swap -> `[3, 5, 8, 4, 2]`
+* Compare `5` and `8`, no swap
+* Compare `8` and `4`, swap -> `[3, 5, 4, 8, 2]`
 * Continue until the array is sorted -> `[2, 3, 4, 5, 8]`
 
-### Time Complexity
-* Worst and average case: `O(n²)` (when the array is in reverse order or random)
-* Best case: `O(n)` (when the array is already sorted)
+### Time & Space Complexity
+| Case    | Time     | Space | Notes                                        |
+| ------- | -------- | ----- | -------------------------------------------- |
+| Best    | `O(n)`   | `O(n)`| When the array is already sorted             |
+| Average | `O(n^2)` | `O(n)`| When the array is in reverse order or random |
+| Worst   | `O(n^2)` | `O(n)`| When the array is in reverse order or random |
 
 ### Resources
 * Java implementation - [Learn Bubble Sort in 7 minutes](https://www.youtube.com/watch?v=Dv4qLJcxus8)
-* Python Implementation - [Sorting: Bubble, Insertion, Selection, Merge, Quick, Counting Sort - DSA Course in Python Lecture 10](https://www.youtube.com/watch?v=gcRUIO-8r3U)
+
+
+## Counting Sort
+You can find the implementation of **Counting Sort** at [./src/algorithms/sort/counting-sort/index.ts](./src/algorithms/sort/counting-sort/index.ts)
+
+**Counting Sort** is a non-comparative, integer sorting algorithm that sorts elements by counting the occurrences of each unique value. It works best when sorting integers within a limited range.
+
+### Steps
+* Count Frequencies: Create a count array where each index represents a unique value in the input array, storing the frequency of each value
+* Accumulate Counts: Modify the count array so each element at index i contains the sum of previous counts, giving the final positions of each element
+* Place Elements: Build the sorted array by placing each element in its final position based on the count array.
+
+### Example:
+For an array `[4, 2, 2, 8, 3, 3, 1]`:
+
+* Count array (frequencies): `[0, 1, 2, 2, 1, 0, 0, 0, 1]`
+* Cumulative count array: `[0, 1, 3, 5, 6, 6, 6, 6, 7]`
+* Build the sorted array: `[1, 2, 2, 3, 3, 4, 8]`
+
+### Time Complexity:
+`O(n + k)`, where `n` is the number of elements and k is the range of input values.
+
+### Use Cases
+**Counting Sort** is efficient for sorting integers with a small range and is commonly used in situations where stability and linear time complexity are needed, like sorting exam scores or age groups. However, it’s less practical for large ranges due to space constraints.
 
 
 ## Insertion Sort
@@ -320,7 +348,6 @@ For an array `[5, 3, 8, 4, 2]`:
 
 ### Resources
 * Java Implementation - [Learn Insertion Sort in 7 minutes](https://www.youtube.com/watch?v=8mJ-OhcfpYg)
-* Python Implementation - [Sorting: Bubble, Insertion, Selection, Merge, Quick, Counting Sort - DSA Course in Python Lecture 10](https://www.youtube.com/watch?v=gcRUIO-8r3U)
 
 
 ## Merge Sort
@@ -378,6 +405,30 @@ For an array `[3, 6, 8, 10, 1, 2, 1]`:
 
 ### Resources
 * Java Implementation - [Learn Quick Sort in 13 Minutes](https://www.youtube.com/watch?v=Vtckgz38QHs)
+
+
+## Selection Sort
+You can find the implementation of **Selection Sort** at [./src/algorithms/sort/selection-sort/index.ts](./src/algorithms/sort/selection-sort/index.ts)
+
+**Selection Sort** is a simple, comparison-based sorting algorithm that sorts an array by repeatedly finding the minimum (or maximum) element from the unsorted part and moving it to the sorted part.
+
+### Steps
+* Start from the beginning of the array
+* Find the smallest element in the unsorted portion
+* Swap it with the first unsorted element, moving it into the sorted portion
+* Repeat this process for each position in the array until the entire array is sorted
+
+### Example
+For an array `[29, 10, 14, 37, 13]`:
+
+* Find the minimum `10` and place it at the start
+* Repeat for the remaining elements until fully sorted: `[10, 13, 14, 29, 37]`
+
+### Time Complexity:
+`O(n²)` for both best and worst cases, where `n` is the number of elements, due to nested loops.
+
+### Use Cases
+**Selection Sort** is efficient for small datasets but inefficient for large ones due to its quadratic time complexity. It is useful in situations where memory writes are costly, as it makes fewer swaps than other simple sorts.
 
 
 # Data Structures
