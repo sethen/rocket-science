@@ -14,11 +14,6 @@ import { BinarySearchTree } from './data-structures/tree/binary-search-tree';
 export { BinarySearchTree }
 
 // algorithms
-// misc
-import { twoSum } from './algorithms/sum/two-sum';
-
-export { twoSum }
-
 // search
 import { binarySearch } from './algorithms/search/binary-search';
 
@@ -34,9 +29,15 @@ import { bubbleSort } from './algorithms/sort/bubble-sort';
 import { insertionSort } from './algorithms/sort/insertion-sort';
 import { mergeSort } from './algorithms/sort/merge-sort';
 import { quickSort } from './algorithms/sort/quick-sort';
+import { selectionSort } from './algorithms/sort/selection-sort';
 
 export { bubbleSort }
 export { insertionSort }
 export { mergeSort }
 export { quickSort }
+export { selectionSort }
 
+// leetcode
+import { twoSum } from './leetcode/two-sum';
+
+export { twoSum }

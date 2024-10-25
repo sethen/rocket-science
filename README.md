@@ -22,8 +22,6 @@ This is a repository full of implementations for common algorithms and data stru
     * [Insertion Sort](#insertion-sort)
     * [Merge Sort](#merge-sort)
     * [Quick Sort](#quick-sort)
-  * [Sum](#sum)
-    * [Two Sum](#two-sum)
   * [Traversal](#traversal)
     * [DFS](#dfs)
       * [Inorder](#inorder)
@@ -36,6 +34,8 @@ This is a repository full of implementations for common algorithms and data stru
     * [Stack](#stack)
   * [Tree](#tree)
     * [Binary Search Tree](#binary-search-tree)
+* [Leetcode](#leetcode)
+  * [Two Sum](#two-sum)
 
 # General Resources I Like 
 There are some general resources out there that I like -- various YouTube channels, articles and the like.  Feel free to look through them:
@@ -200,34 +200,6 @@ Result would be `[1, 2, 4, 5, 3]`.
 ![Traversal DFS Preorder](./src/algorithms/traversal/dfs/preorder/images/traversal-dfs-preorder.png)
 
 
-## Sum
-You can find all of the implementations of **Sum** at [./src/algorithms/sum](./src/algorithms/sum)
-
-## Two Sum 
-You can find the implementation of **Two Sum** at [./src/algorithms/sum/two-sum/index.ts](./src/algorithms/sum/two-sum/index.ts)
-
-**Two Sum** problem involves finding two numbers in an array that add up to a given target. The goal is to return the indices of these two numbers.  A common, optimized approach uses a hash map to store the numbers and their indices as you iterate through the array. For each number, you calculate the complement (target minus the current number) and check if it's already in the map. If it is, you return the indices of the complement and the current number. 
-
-### Steps
-* Iterate through the array while keeping track of each number's complement (target minus the current number)
-* Use a hash map to store the numbers and their indices as you go
-* For each number, check if its complement already exists in the hash map
-* If found, return the indices of the complement and the current number
-
-### Example
-For an array `[2, 7, 11, 15]` and target `9`:
-
-* Complement of `2` is `7`, store `2` in the map
-* Complement of `7` is `2`, which is already in the map
-* Return indices `[0, 1]`.
-
-### Time Complexity
-`O(n)`, where n is the number of elements, because the array is traversed once, and hash map operations take constant time.  **Two Sum** is efficient for large datasets due to its use of a hash map, making it a common interview question and practical solution for sum-based problems.
-
-### Resources
-* Python implementation - [Short](https://www.youtube.com/shorts/pFag4mBsO1I)
-* Python implementation - [Short](https://www.youtube.com/shorts/ysifKoOZw5g)
-* [Leetcode 1](https://leetcode.com/problems/two-sum/description/)
 
 
 ## Search
@@ -313,6 +285,7 @@ For an array `[5, 3, 8, 4, 2]`:
 
 ### Resources
 * Java implementation - [Learn Bubble Sort in 7 minutes](https://www.youtube.com/watch?v=Dv4qLJcxus8)
+* Python Implementation - [Sorting: Bubble, Insertion, Selection, Merge, Quick, Counting Sort - DSA Course in Python Lecture 10](https://www.youtube.com/watch?v=gcRUIO-8r3U)
 
 
 ## Insertion Sort
@@ -343,6 +316,7 @@ For an array `[5, 3, 8, 4, 2]`:
 
 ### Resources
 * Java Implementation - [Learn Insertion Sort in 7 minutes](https://www.youtube.com/watch?v=8mJ-OhcfpYg)
+* Python Implementation - [Sorting: Bubble, Insertion, Selection, Merge, Quick, Counting Sort - DSA Course in Python Lecture 10](https://www.youtube.com/watch?v=gcRUIO-8r3U)
 
 
 ## Merge Sort
@@ -540,3 +514,33 @@ The root is `5`, with `3` and `7` as its children:
 ![Complete Binary Tree](./src/data-structures/tree/binary-search-tree/images/complete-binary-tree.png)
 ![Perfect Binary Tree](./src/data-structures/tree/binary-search-tree/images/perfect-binary-tree.png)
 ![Binary Search Tree](./src/data-structures/tree/binary-search-tree/images/binary-search-tree.png)
+
+
+
+## Leetcode
+You can find all of the implementations of **Leetcode** problems at [./src/leetcode](./src/leetcode)
+
+## Two Sum 
+The problem we are solving can be found at [Leetcode 1](https://leetcode.com/problems/two-sum/description/).  You can find the implementation of **Two Sum** at [./src/leetcode/two-sum/index.ts](./src/leetcode/two-sum/index.ts)
+
+**Two Sum** problem involves finding two numbers in an array that add up to a given target. The goal is to return the indices of these two numbers.  A common, optimized approach uses a hash map to store the numbers and their indices as you iterate through the array. For each number, you calculate the complement (target minus the current number) and check if it's already in the map. If it is, you return the indices of the complement and the current number. 
+
+### Steps
+* Iterate through the array while keeping track of each number's complement (target minus the current number)
+* Use a hash map to store the numbers and their indices as you go
+* For each number, check if its complement already exists in the hash map
+* If found, return the indices of the complement and the current number
+
+### Example
+For an array `[2, 7, 11, 15]` and target `9`:
+
+* Complement of `2` is `7`, store `2` in the map
+* Complement of `7` is `2`, which is already in the map
+* Return indices `[0, 1]`.
+
+### Time Complexity
+`O(n)`, where n is the number of elements, because the array is traversed once, and hash map operations take constant time.  **Two Sum** is efficient for large datasets due to its use of a hash map, making it a common interview question and practical solution for sum-based problems.
+
+### Resources
+* Python implementation - [Short](https://www.youtube.com/shorts/pFag4mBsO1I)
+* Python implementation - [Short](https://www.youtube.com/shorts/ysifKoOZw5g)
