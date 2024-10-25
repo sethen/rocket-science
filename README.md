@@ -8,6 +8,7 @@ This is a repository full of implementations for common algorithms and data stru
   * [Articles](#articles)
   * [Books](#books)
   * [Playlists](#playlists)
+  * [Repositories](#repositories)
   * [Websites](#websites)
   * [YouTube](#youtube)
 * [How to Use](#how-to-use)
@@ -51,13 +52,21 @@ There are some general resources out there that I like -- various YouTube channe
 ## Playlists
 * [Data Structures & Algorithms in Python - The Complete Pathway](https://www.youtube.com/watch?v=aWKEBEg55ps&list=PLKYEe2WisBTFEr6laH5bR2J19j7sl5O8R)
 
+## Repositories
+* [System Design Primer](https://github.com/donnemartin/system-design-primer)
+* [What Happens When](https://github.com/alex/what-happens-when)
+
 ## Websites
 * [AlgoMap](https://algomap.io/)
-
+* [Front End Masters](https://frontendmasters.com/)
+* [Learn X in Y](https://learnxinyminutes.com/)
+* [StackOverflow](https://stackoverflow.com/)
+ 
 ## YouTube
 * [Greg Hogg](https://www.youtube.com/@GregHogg)
 * [NeetCode](https://www.youtube.com/@neetcode)
 * [ThePrimeTimeagen](https://www.youtube.com/@ThePrimeTimeagen)
+
 
 # Time & Space Complexity
 It's important to know about Time & Space Complexity to understand how these algorithms perform as their input grows.  Check out [Time & Space Complexity - Big O Notation](https://youtu.be/aWKEBEg55ps?si=VvR7Yymf97-RwK1T) by Greg Hogg.
