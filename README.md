@@ -260,6 +260,10 @@ For an array `[-2, 1, -3, 4, -1, 2, 1, -5, 4]`, the **Max Sub Array** is `[4, -1
 ## Sort
 You can find all of the implementations of **Sort** at [./src/algorithms/sort](./src/algorithms/sort)
 
+### Resources
+* [Sorting: Bubble, Insertion, Selection, Merge, Quick, Counting Sort - DSA Course in Python Lecture 10](https://www.youtube.com/watch?v=gcRUIO-8r3U&t=709s)
+
+
 ## Bubble Sort
 You can find the implementation of **Bubble Sort** at [./src/algorithms/sort/bubble-sort/index.ts](./src/algorithms/sort/bubble-sort/index.ts)
 
