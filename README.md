@@ -202,8 +202,6 @@ Result would be `[1, 2, 4, 5, 3]`.
 ![Traversal DFS Preorder](./src/algorithms/traversal/dfs/preorder/images/traversal-dfs-preorder.png)
 
 
-
-
 ## Search
 You can find all of the implementations of **Search** at [./src/algorithms/search](./src/algorithms/search)
 
@@ -226,13 +224,20 @@ For a sorted array `[1, 3, 5, 7, 9]` and target `7`:
 * Compare with middle element `5`, target is larger, search right half
 * Compare with middle element `7`, target is found, return index `3`.
 
-### Time Complexity
-**Binary search** operates in `O(log n)` time complexity, making it much faster than linear search for large datasets, but it requires the data to be sorted.  `O(log n)`, where n is the number of elements, because the search space is halved with each step.
+### Time & Space Complexity
+| Case    | Time       | Space  | Notes                                        |
+| ------- | ---------- | ------ | -------------------------------------------- |
+| Best    | `O(1)`     | `O(1)` |                                              |
+| Average | `O(log n)` | `O(1)` | Where `n` is the number of elements          |
+| Worst   | `O(log n)` | `O(1)` | Where `n` is the number of elements          |
+
+**Binary search** typically operates in `O(log n)` time complexity, making it much faster than linear search for large datasets, but it requires the data to be sorted.  `O(log n)`, where `n` is the number of elements, because the search space is halved with each step.
 
 ### Resources
 * JavaScript implementation - [Binary Search in 100 Seconds](https://www.youtube.com/watch?v=MFhxShGxHWch)
 * Python implementation - [Binary Search - Leetcode 704 - Python](https://www.youtube.com/watch?v=s4DPM8ct1pI)
 * [Leetcode 704](https://leetcode.com/problems/binary-search/description/)
+
 
 ## Sliding Window
 You can find all of the implementations of **Sliding Window** at [./src/algorithms/sliding-window](./src/algorithms/sliding-window)
@@ -286,11 +291,13 @@ For an array `[5, 3, 8, 4, 2]`:
 * Continue until the array is sorted -> `[2, 3, 4, 5, 8]`
 
 ### Time & Space Complexity
-| Case    | Time     | Space | Notes                                        |
-| ------- | -------- | ----- | -------------------------------------------- |
-| Best    | `O(n)`   | `O(n)`| When the array is already sorted             |
-| Average | `O(n^2)` | `O(n)`| When the array is in reverse order or random |
-| Worst   | `O(n^2)` | `O(n)`| When the array is in reverse order or random |
+| Case    | Time     | Space  | Notes                                        |
+| ------- | -------- | ------ | -------------------------------------------- |
+| Best    | `O(n)`   | `O(n)` | When the array is already sorted             |
+| Average | `O(n^2)` | `O(n)` | When the array is in reverse order or random |
+| Worst   | `O(n^2)` | `O(n)` | When the array is in reverse order or random |
+
+**Bubble Sort** is not efficient for large datasets, but it’s easy to understand and implement, making it useful for educational purposes.
 
 ### Resources
 * Java implementation - [Learn Bubble Sort in 7 minutes](https://www.youtube.com/watch?v=Dv4qLJcxus8)
@@ -306,15 +313,12 @@ You can find the implementation of **Counting Sort** at [./src/algorithms/sort/c
 * Accumulate Counts: Modify the count array so each element at index i contains the sum of previous counts, giving the final positions of each element
 * Place Elements: Build the sorted array by placing each element in its final position based on the count array.
 
-### Example:
+### Example
 For an array `[4, 2, 2, 8, 3, 3, 1]`:
 
 * Count array (frequencies): `[0, 1, 2, 2, 1, 0, 0, 0, 1]`
 * Cumulative count array: `[0, 1, 3, 5, 6, 6, 6, 6, 7]`
 * Build the sorted array: `[1, 2, 2, 3, 3, 4, 8]`
-
-### Time Complexity:
-`O(n + k)`, where `n` is the number of elements and k is the range of input values.
 
 ### Use Cases
 **Counting Sort** is efficient for sorting integers with a small range and is commonly used in situations where stability and linear time complexity are needed, like sorting exam scores or age groups. However, it’s less practical for large ranges due to space constraints.
@@ -339,9 +343,14 @@ For an array `[5, 3, 8, 4, 2]`:
 * Then `8` stays in place, and `4` is inserted between `3` and `5`
 * Finally, `2` is inserted at the start, giving `[2, 3, 4, 5, 8]`
 
-### Time Complexity
-* Best case: `O(n)` (when the array is already sorted)
-* Worst and average case: `O(n²)` (when the array is in reverse order or random)
+### Time & Space Complexity
+| Case    | Time     | Space  |
+| ------- | -------- | ------ |
+| Best    | `O(n)`   | `O(1)` |
+| Average | `O(n^2)` | `O(1)` |
+| Worst   | `O(n^2)` | `O(1)` |
+
+**Insertion Sort** is efficient for small datasets or arrays that are already mostly sorted. It's easy to implement and understand but not suitable for large datasets due to its quadratic time complexity.
 
 ### Use Cases
 **Insertion Sort** is efficient for small datasets or arrays that are already mostly sorted. It's easy to implement and understand but not suitable for large datasets due to its quadratic time complexity.
@@ -368,8 +377,12 @@ For an array `[3, 1, 4, 1, 5, 9, 2, 6]`:
 * Recursively divide and sort each half.
 * Merge sorted subarrays to get the fully sorted array `[1, 1, 2, 3, 4, 5, 6, 9]`.
 
-### Time Complexity
-* `O(n log n)` in all cases (best, worst, and average), making it highly efficient for large datasets
+### Time & Space Complexity
+| Case    | Time         | Space  |
+| ------- | ------------ | ------ |
+| Best    | `O(n log n)` | `O(n)` |
+| Average | `O(n log n)` | `O(n)` |
+| Worst   | `O(n log n)` | `O(n)` |
 
 ### Use Cases
 **Merge Sort** is stable and guarantees optimal performance, making it ideal for sorting linked lists or for scenarios where guaranteed `O(n log n)` performance is required. However, it requires additional memory for the merging process.
@@ -396,9 +409,12 @@ For an array `[3, 6, 8, 10, 1, 2, 1]`:
 * Partition to get `[1, 2, 1]` (less than 3) and `[6, 8, 10]` (greater than `3`)
 * Recursively sort the subarrays
 
-### Time Complexity
-* Average case: `O(n log n)`
-* Worst case: `O(n²)` (when the pivot is poorly chosen, like the smallest or largest element)
+### Time & Space Complexity
+| Case    | Time          | Space      | Notes                                        |
+| ------- | ------------- | ---------- | -------------------------------------------- |
+| Best    | `O(n log n)`  | `O(n)`     | |
+| Average | `O(n log n)`  | `O(log n)` | |
+| Worst   | `O(n^2)`      | `O(log n)` | When the pivot is poorly choosen             |
 
 ### Use Cases
 **Quick Sort** is known for its fast performance and is widely used in practice, particularly for large datasets, because of its average-case efficiency and in-place sorting.
@@ -424,8 +440,13 @@ For an array `[29, 10, 14, 37, 13]`:
 * Find the minimum `10` and place it at the start
 * Repeat for the remaining elements until fully sorted: `[10, 13, 14, 29, 37]`
 
-### Time Complexity:
-`O(n²)` for both best and worst cases, where `n` is the number of elements, due to nested loops.
+### Time & Space Complexity
+| Case    | Time          | Space      | Notes                                        |
+| ------- | ------------- | ---------- | -------------------------------------------- |
+| Best    | `O(n^2)`      | `O(n)`     | Where `n` is the number of elements          |
+| Average | `O(n^2)`      | `O(n)`     | Where `n` is the number of elements          |
+| Worst   | `O(n^2)`      | `O(1)`     | |
+
 
 ### Use Cases
 **Selection Sort** is efficient for small datasets but inefficient for large ones due to its quadratic time complexity. It is useful in situations where memory writes are costly, as it makes fewer swaps than other simple sorts.
@@ -555,7 +576,7 @@ The root is `5`, with `3` and `7` as its children:
 * `3` has children `2` and `4`
 * `7` has children `6` and `8`
 
-### Time Complexity:
+### Time Complexity
 * Best/Average case: `O(log n)` for search, insert, and delete
 * Worst case: `O(n)`, if the tree becomes unbalanced (e.g., a sorted input)
 
