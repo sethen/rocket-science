@@ -1,4 +1,4 @@
-// countArring Sort
+// Counting Sort
 // Time: O(n + k) where k is the range of the data
 // Space: O(k)
 // NOTE: Only supports positive numbers

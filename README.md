@@ -1,10 +1,8 @@
 # Rocket Science
-This is a repository full of implementations for common algorithms and data structures.  These are written in TypeScript and provide comments to help you understand what's happening.
-
+This is a repository dedicated to studying concepts in computer science.  Here you will find algorithms, data structures and resources to help you on your computer science journey.  There are implementations of common algorithms and data strucutres in TypeScript.  In the future I may provide more implementations in other languages.
 
 # Tables of Contents
-
-* [General Resources I Like](#general-resources-i-like)
+* [General Resources](#general-resources)
   * [Articles](#articles)
   * [Books](#books)
   * [Playlists](#playlists)
@@ -40,17 +38,15 @@ This is a repository full of implementations for common algorithms and data stru
 * [Leetcode](#leetcode)
   * [Two Sum](#two-sum)
 
-# General Resources I Like 
+# General Resources 
 There are some general resources out there that I like -- various YouTube channels, articles and the like.  Feel free to look through them:
 
 ## Articles
 * [Extra, Extra - Read All About It: Nearly All Binary Searches and Mergesorts are Broken](https://research.google/blog/extra-extra-read-all-about-it-nearly-all-binary-searches-and-mergesorts-are-broken/)
+* [Learn Big O Notation](https://www.freecodecamp.org/news/learn-big-o-notation/)
 
 ## Books
 * [Grokking Algorithms, Second Edition](https://www.amazon.com/Grokking-Algorithms-Second-Aditya-Bhargava/dp/1633438538)
-
-## Playlists
-* [Data Structures & Algorithms in Python - The Complete Pathway](https://www.youtube.com/watch?v=aWKEBEg55ps&list=PLKYEe2WisBTFEr6laH5bR2J19j7sl5O8R)
 
 ## Repositories
 * [System Design Primer](https://github.com/donnemartin/system-design-primer)
@@ -58,20 +54,51 @@ There are some general resources out there that I like -- various YouTube channe
 
 ## Websites
 * [AlgoMap](https://algomap.io/)
+* [freeCodeCamp](https://www.freecodecamp.org/)
 * [Front End Masters](https://frontendmasters.com/)
+* [Khan Academy](https://www.khanacademy.org/)
 * [Learn X in Y](https://learnxinyminutes.com/)
 * [StackOverflow](https://stackoverflow.com/)
- 
+* [Teach Yourself Computer Science](https://teachyourselfcs.com/)
+
 ## YouTube
+YouTube has a lot of amazing content for you to check out -- from creators to content.
+
+### Creators
 * [Greg Hogg](https://www.youtube.com/@GregHogg)
 * [NeetCode](https://www.youtube.com/@neetcode)
 * [ThePrimeTimeagen](https://www.youtube.com/@ThePrimeTimeagen)
 
+### Playlists
+* [Analysis of Algorithms](https://www.youtube.com/watch?v=22hwcnXIGgk&list=PLOtl7M3yp-DX6ic0HGT0PUX_wiNmkWkXx&index=1)
+* [Data Structures and Algorithms](https://www.youtube.com/watch?v=xX5iOYCJmBI&list=PLZPZq0r_RZON1eaqfafTnEexRzuHbfZX8)
+* [Data Structures & Algorithms in Python - The Complete Pathway](https://www.youtube.com/watch?v=aWKEBEg55ps&list=PLKYEe2WisBTFEr6laH5bR2J19j7sl5O8R)
+
+### Videos
+* [Big O Notation - Full Course](https://www.youtube.com/watch?v=Mo4vesaut8g)
+* [Time & Space Complexity - Big O Notation](https://youtu.be/aWKEBEg55ps?si=VvR7Yymf97-RwK1T)
 
 # Time & Space Complexity
-It's important to know about Time & Space Complexity to understand how these algorithms perform as their input grows.  Check out [Time & Space Complexity - Big O Notation](https://youtu.be/aWKEBEg55ps?si=VvR7Yymf97-RwK1T) by Greg Hogg.
-
 ![Time Complexity Chart](/assets/images/time-complexity-chart.png)
+
+It's important to know about Time & Space Complexity to understand how these algorithms perform as their input grows.  Here are some resrouces to help you on your journey:
+
+* [Big O Notation - Full Course](https://www.youtube.com/watch?v=Mo4vesaut8g)
+* [Learn Big O Notation](https://www.freecodecamp.org/news/learn-big-o-notation/)
+* [Time & Space Complexity - Big O Notation](https://youtu.be/aWKEBEg55ps?si=VvR7Yymf97-RwK1T)
+
+Here are the orders of growth from best to worst:
+
+| Growth       | Name         |
+| ------------ | ------------ |
+| `O(1)`       | Constant     | 
+| `O(log n)`   | Logarithmic  | 
+| `O(n)`       | Linear       |
+| `O(n log n)` | Linearithmic |
+| `O(n^2)`     | Quadratic    |
+| `O(n^3)`     | Cubic        |
+| `O(2^n)`     | Exponential  |
+| `O(n!)`      | Factorial    |
 
 
 # How to Use 
