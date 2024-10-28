@@ -42,6 +42,8 @@ export { selectionSort }
 // leetcode
 import { twoSum } from './leetcode/1-two-sum';
 import { addTwoNumbers } from './leetcode/2-add-two-numbers';
+import { lengthOfLongestSubstring } from './leetcode/3-longest-substring-without-repeating-characters';
 
 export { twoSum }
 export { addTwoNumbers }
+export { lengthOfLongestSubstring }

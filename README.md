@@ -38,6 +38,7 @@ This is a repository dedicated to studying concepts in computer science.  Here y
 * [Leetcode](#leetcode)
   * [1. Two Sum](#1-two-sum)
   * [2. Add Two Numbers](#2-add-two-numbers)
+  * [3. Longest Substring Without Repeating Characters](#3-longest-substring-without-repeating-characters)
 
 
 # General Resources 
@@ -689,3 +690,31 @@ This problem models integer addition in reverse order, useful in applications de
 
 ### Resources
 * [Add Two Numbers - Leetcode 2 - Python](https://www.youtube.com/watch?v=wgFPrzTjm7s)
+
+
+## 3. Longest Substring Without Repeating Characters
+The problem we are solving can be found at [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/).
+
+You can find the implementation of **Longest Substring Without Repeating Characters** at [./src/leetcode/3-longest-substring-without-repeating-characters/index.ts](./src/leetcode/3-longest-substring-without-repeating-characters/index.ts)
+
+**Longest Substring Without Repeating Characters** problem involves finding the longest substring within a given string that contains all unique characters, with no repeats.
+
+### Steps
+Use a sliding window technique with two pointers to track the current substring and a set to store unique characters
+* Expand the window by moving the right pointer, adding characters to the set if they’re not already present
+* If a character is repeated, move the left pointer to shrink the window until the substring is unique again
+* Track the maximum length of substrings found during this process
+
+### Example
+For the string `"abcabcbb"`:
+* Starting from `"abc"` (length 3) and encountering a repeat `"a"`, shift the window to `"bca"`.
+* Resulting longest substring without repeating characters is `"abc"` or `"bca"`, with length `3`.
+
+### Time Complexity
+`O(n)`, where `n` is the length of the string, since each character is added and removed from the set at most once.
+
+### Use Cases
+This technique is useful for parsing strings to find unique patterns, and it serves as a foundation for solving similar problems involving substrings or sequences.
+
+### Resources
+* [Longest Substring Without Repeating Characters - Leetcode 3 - Sliding Window (Python)](https://www.youtube.com/watch?v=FCbOzdHKW18)
