@@ -36,7 +36,9 @@ This is a repository dedicated to studying concepts in computer science.  Here y
   * [Tree](#tree)
     * [Binary Search Tree](#binary-search-tree)
 * [Leetcode](#leetcode)
-  * [Two Sum](#two-sum)
+  * [1. Two Sum](#1-two-sum)
+  * [2. Add Two Numbers](#2-add-two-numbers)
+
 
 # General Resources 
 There are some general resources out there that I like -- various YouTube channels, articles and the like.  Feel free to look through them:
@@ -632,8 +634,10 @@ The root is `5`, with `3` and `7` as its children:
 ## Leetcode
 You can find all of the implementations of **Leetcode** problems at [./src/leetcode](./src/leetcode)
 
-## Two Sum 
-The problem we are solving can be found at [Leetcode 1](https://leetcode.com/problems/two-sum/description/).  You can find the implementation of **Two Sum** at [./src/leetcode/two-sum/index.ts](./src/leetcode/two-sum/index.ts)
+## 1. Two Sum 
+The problem we are solving can be found at [Two Sum](https://leetcode.com/problems/1-two-sum/description/).
+
+You can find the implementation of **Two Sum** at [./src/leetcode/1-two-sum/index.ts](./src/leetcode/1-two-sum/index.ts)
 
 **Two Sum** problem involves finding two numbers in an array that add up to a given target. The goal is to return the indices of these two numbers.  A common, optimized approach uses a hash map to store the numbers and their indices as you iterate through the array. For each number, you calculate the complement (target minus the current number) and check if it's already in the map. If it is, you return the indices of the complement and the current number. 
 
@@ -656,3 +660,32 @@ For an array `[2, 7, 11, 15]` and target `9`:
 ### Resources
 * Python implementation - [Short](https://www.youtube.com/shorts/pFag4mBsO1I)
 * Python implementation - [Short](https://www.youtube.com/shorts/ysifKoOZw5g)
+
+
+## 2. Add Two Numbers 
+The problem we are solving can be found at [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/).
+
+You can find the implementation of **Add Two Numbers** at [./src/leetcode/2-add-two-numbers/index.ts](./src/leetcode/2-add-two-numbers/index.ts)
+
+**Add Two Numbers** from Two Linked Lists is a problem where two linked lists represent two non-negative integers in reverse order, with each node containing a single digit. The goal is to add these two numbers together, node by node, and return the sum as a new linked list in the same reverse order.
+
+### Steps
+* Initialize a dummy node to help build the resulting linked list
+* Traverse both linked lists from the head, adding corresponding nodes together along with any carry from the previous sum
+* Store each sum's last digit in the new linked list node and update the carry for the next addition
+* Continue until both lists are fully traversed and no carry remains
+
+### Example
+For linked lists `2 -> 4 -> 3` (representing `342`) and `5 -> 6 -> 4` (representing `465`):
+
+* Add each pair of digits (with carry): `2 + 5 = 7`, `4 + 6 = 10` (carry `1`), `3 + 4 + 1 = 8`
+* Resulting linked list: `7 -> 0 -> 8` (representing `807`)
+
+### Time Complexity
+`O(max(m, n))`, where m and n are the lengths of the two linked lists, since each node is visited once.
+
+### Use Cases
+This problem models integer addition in reverse order, useful in applications dealing with very large numbers stored as lists due to constraints on integer size in typical programming languages.
+
+### Resources
+* [Add Two Numbers - Leetcode 2 - Python](https://www.youtube.com/watch?v=wgFPrzTjm7s)
